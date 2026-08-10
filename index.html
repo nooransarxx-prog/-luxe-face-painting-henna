@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxe Face Painting & Henna | Face Painting & Henna Artist in London</title>
+<meta name="description" content="Luxe Face Painting & Henna brings magical face painting and elegant bridal henna to events across London — kids parties, festivals, weddings and cultural celebrations. Enquire for a personalised quote.">
+<meta name="keywords" content="Face Painting London, Henna Artist London, Kids Face Painting London, Bridal Henna London">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Berkshire+Swash&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Marcellus&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ========================================================
+   TOKENS
+======================================================== */
+:root{
+  --cream:#fff8ee;
+  --ink:#241812;
+  --ink-soft:#4a3a2c;
+
+  /* Face Painting — playful */
+  --fp-coral:#ff6b5b;
+  --fp-yellow:#ffc94d;
+  --fp-teal:#33b6a8;
+  --fp-purple:#9a6fe0;
+  --fp-pink:#ff8fb1;
+  --fp-bg:#fff6ec;
+
+  /* Henna — elegant */
+  --hn-brown:#241209;
+  --hn-brown-2:#3a2013;
+  --hn-gold:#c9a24b;
+  --hn-gold-2:#e8cd8a;
+  --hn-ivory:#f4ead7;
+  --hn-maroon:#6b2a26;
+
+  --radius-lg:26px;
+  --radius-md:16px;
+  --maxw:1180px;
+  --shadow-soft:0 18px 40px rgba(36,24,18,.10);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:'Manrope',sans-serif;font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+p{margin:0 0 1em;}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+ul{margin:0;padding:0;list-style:none;}
+button{font-family:inherit;cursor:pointer;background:none;border:none;}
+input,textarea,select{font-family:inherit;font-size:1rem;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+::selection{background:var(--fp-yellow);color:var(--ink);}
+:focus-visible{outline:2px solid var(--fp-coral);outline-offset:3px;}
+section{scroll-margin-top:78px;}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+}
+
+/* Type roles */
+.fp-font{font-family:'Baloo 2',sans-serif;}
+.magic-font{font-family:'Berkshire Swash',cursive;font-weight:400;letter-spacing:.01em;}
+.hn-font{font-family:'Marcellus',serif;}
+.hn-script{font-family:'Cormorant Garamond',serif;font-style:italic;}
+
+h1,h2,h3,h4{margin:0 0 .45em;line-height:1.12;font-weight:700;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800;
+  margin-bottom:14px;color:var(--fp-coral);
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:currentColor;border-radius:2px;}
+.eyebrow.gold{color:var(--hn-gold);}
+.eyebrow.gold::before{background:var(--hn-gold);}
+
+/* ========================================================
+   BUTTONS
+======================================================== */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:16px 30px;font-weight:700;font-size:.95rem;letter-spacing:.01em;
+  border-radius:999px;border:2px solid transparent;white-space:nowrap;cursor:pointer;
+  transition:transform .22s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
+}
+.btn-playful{
+  font-family:'Baloo 2',sans-serif;
+  background:linear-gradient(120deg,var(--fp-coral),var(--fp-pink));
+  color:#fff8ee;box-shadow:0 10px 24px rgba(255,107,91,.35);
+}
+.btn-playful:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 16px 34px rgba(255,107,91,.48);}
+.btn-playful:active{transform:translateY(-1px) scale(.99);}
+.btn-ghost-playful{border-color:rgba(255,107,91,.45);color:var(--fp-coral);font-family:'Baloo 2',sans-serif;background:#fff;}
+.btn-ghost-playful:hover{background:rgba(255,107,91,.08);transform:translateY(-3px);}
+.btn-gold{
+  background:linear-gradient(120deg,var(--hn-gold),var(--hn-gold-2));
+  color:var(--hn-brown);border-color:var(--hn-gold);
+  box-shadow:0 10px 26px rgba(201,162,75,.30);
+}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(201,162,75,.42);}
+.btn-outline-gold{border-color:rgba(232,205,138,.65);color:var(--hn-gold-2);}
+.btn-outline-gold:hover{background:rgba(232,205,138,.10);transform:translateY(-3px);}
+.btn-outline-ink{border-color:var(--ink);color:var(--ink);}
+.btn-outline-ink:hover{background:var(--ink);color:var(--cream);transform:translateY(-3px);}
+.btn-block{width:100%;justify-content:center;}
+
+/* ========================================================
+   HEADER
+======================================================== */
+header{
+  position:sticky;top:0;z-index:600;
+  background:rgba(255,248,238,.90);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(36,24,18,.08);
+}
+.headbar{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:var(--maxw);margin:0 auto;}
+.logo{display:flex;flex-direction:column;gap:0;}
+.logo-main{display:flex;align-items:baseline;gap:2px;font-size:1.5rem;}
+.logo b{font-family:'Baloo 2',sans-serif;font-weight:800;color:var(--fp-coral);}
+.logo i{font-family:'Marcellus',serif;font-style:normal;color:var(--hn-brown);}
+.logo-sub{display:block;font-family:'Manrope',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin-top:2px;}
+nav.mainnav{display:flex;align-items:center;gap:4px;}
+.navlink{
+  padding:10px 15px;font-size:.88rem;font-weight:700;color:var(--ink-soft);
+  position:relative;border-radius:999px;transition:color .2s ease,background .2s ease;
+}
+.navlink:hover{color:var(--fp-coral);background:rgba(255,107,91,.08);}
+.nav-cta{margin-left:8px;}
+.burger{display:none;flex-direction:column;gap:5px;padding:8px;}
+.burger span{width:24px;height:2px;background:var(--ink);display:block;border-radius:2px;transition:transform .25s ease,opacity .25s ease;}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.burger.open span:nth-child(2){opacity:0;}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* ========================================================
+   HERO — the seam
+======================================================== */
+.hero{position:relative;overflow:hidden;min-height:88vh;display:flex;align-items:center;}
+.hero-half{position:absolute;inset:0;}
+.hero-half.playful{
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255,201,77,.55), transparent 45%),
+    radial-gradient(circle at 30% 78%, rgba(154,111,224,.35), transparent 50%),
+    linear-gradient(135deg,#fff6ec, #ffe7de 60%);
+  clip-path:polygon(0 0, 62% 0, 40% 100%, 0 100%);
+}
+.hero-half.henna{
+  background:
+    radial-gradient(circle at 80% 20%, rgba(201,162,75,.25), transparent 50%),
+    linear-gradient(135deg,#2c1810,#241209 70%);
+  clip-path:polygon(62% 0, 100% 0, 100% 100%, 40% 100%);
+}
+.seam-glow{
+  position:absolute;top:0;bottom:0;left:38%;width:6%;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg, transparent, rgba(232,205,138,.9) 20%, rgba(255,201,77,.9) 50%, rgba(232,205,138,.9) 80%, transparent);
+  clip-path:polygon(58% 0,64% 0,42% 100%,36% 100%);
+  filter:blur(1px);
+  animation:shimmer 3.6s ease-in-out infinite;
+}
+@keyframes shimmer{0%,100%{opacity:.55;}50%{opacity:1;}}
+.hero-shapes{position:absolute;inset:0;z-index:1;pointer-events:none;}
+.hero-shapes .corner-shape{z-index:1;opacity:.85;}
+.float-shape{position:absolute;animation:floaty 7s ease-in-out infinite;}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-22px) rotate(8deg);}}
+.mandala{position:absolute;opacity:.35;animation:spin 90s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* Animated decorative stickers */
+.sticker{
+  position:absolute;display:flex;align-items:center;justify-content:center;
+  border-radius:50%;box-shadow:0 12px 26px rgba(36,24,18,.22);
+  animation:stickerDrift 6s ease-in-out infinite;pointer-events:none;z-index:0;
+}
+@keyframes stickerDrift{0%,100%{transform:translateY(0) rotate(-5deg);}50%{transform:translateY(-16px) rotate(5deg);}}
+.sticker-hn{box-shadow:0 12px 26px rgba(0,0,0,.4);}
+
+/* Floating quick-contact buttons */
+.fab-stack{position:fixed;right:18px;bottom:18px;z-index:700;display:flex;flex-direction:column;gap:12px;}
+.fab{
+  width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 24px rgba(36,24,18,.35);transition:transform .25s cubic-bezier(.34,1.56,.64,1);
+}
+.fab:hover{transform:scale(1.08) translateY(-2px);}
+.fab-wa{background:#25D366;}
+.fab-ig{background:radial-gradient(circle at 30% 110%,#ffdb73 0%,#fd5 20%,#ff543e 45%,#c837ab 65%,#7038c7 90%);}
+@media (max-width:760px){
+  .fab-stack{right:14px;bottom:14px;gap:10px;}
+  .fab{width:48px;height:48px;}
+  .fab svg{width:22px;height:22px;}
+}
+
+.hero-inner{position:relative;z-index:3;max-width:var(--maxw);margin:0 auto;padding:0 24px;text-align:center;width:100%;}
+.hero-panel{
+  display:inline-block;max-width:760px;margin:0 auto;padding:44px 52px;border-radius:28px;
+  background:rgba(255,248,238,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  box-shadow:0 30px 70px rgba(36,24,18,.22);border:1px solid rgba(255,255,255,.5);
+}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:999px;background:rgba(36,24,18,.06);border:1px solid rgba(36,24,18,.12);font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:28px;
+  opacity:0;transform:translateY(14px);animation:heroIn .8s ease forwards .05s;}
+.hero h1{font-size:clamp(2.1rem,5.6vw,4.1rem);max-width:19ch;margin:0 auto;color:var(--ink);
+  opacity:0;transform:translateY(24px);animation:heroIn .9s ease forwards .18s;}
+.hero h1 .hl-playful{font-family:'Berkshire Swash',cursive;font-weight:400;background:linear-gradient(100deg,var(--fp-coral),var(--fp-purple));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero h1 .hl-henna{font-family:'Marcellus',serif;font-weight:400;background:linear-gradient(100deg,var(--hn-gold),#b8862f);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero .sub{max-width:48ch;margin:22px auto 30px;font-size:1.14rem;color:var(--ink);font-weight:500;
+  opacity:0;transform:translateY(20px);animation:heroIn .9s ease forwards .32s;}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;
+  opacity:0;transform:translateY(18px);animation:heroIn .9s ease forwards .46s;}
+@keyframes heroIn{to{opacity:1;transform:translateY(0);}}
+
+/* ========================================================
+   SECTION SHELLS
+======================================================== */
+section.block{padding:96px 0;}
+section.block.tight{padding:64px 0;}
+.section-head{max-width:640px;margin-bottom:48px;}
+.section-head.center{margin:0 auto 48px;text-align:center;}
+
+.theme-playful{background:var(--fp-bg);color:var(--ink);position:relative;overflow:hidden;}
+.theme-henna{background:linear-gradient(160deg,var(--hn-brown),var(--hn-brown-2));color:var(--hn-ivory);position:relative;overflow:hidden;}
+.theme-henna h2,.theme-henna h3,.theme-henna h4{font-family:'Marcellus',serif;color:#fbf1de;font-weight:400;letter-spacing:.02em;text-shadow:0 2px 18px rgba(0,0,0,.35);}
+.theme-henna p{color:rgba(244,234,215,.9);}
+.theme-neutral{background:var(--cream);}
+.fp-font{letter-spacing:-.01em;}
+.hn-font{letter-spacing:.03em;}
+
+/* Seam divider between themed sections */
+.seam-divider{position:relative;height:64px;overflow:hidden;}
+.seam-divider svg{width:100%;height:100%;display:block;}
+.seam-divider.p-to-h{background:linear-gradient(180deg,var(--fp-bg),var(--hn-brown));}
+.seam-divider.h-to-p{background:linear-gradient(180deg,var(--hn-brown-2),var(--fp-bg));}
+.seam-divider.h-to-n{background:linear-gradient(180deg,var(--hn-brown-2),var(--cream));}
+.seam-divider.n-to-h{background:linear-gradient(180deg,var(--cream),var(--hn-brown));}
+.seam-line{stroke:var(--hn-gold-2);stroke-width:2;fill:none;opacity:.85;}
+.seam-thread{animation:threadmove 5s linear infinite;stroke-dasharray:6 10;}
+@keyframes threadmove{to{stroke-dashoffset:-64;}}
+
+/* Decorative mandala ornament used in henna sections */
+.orn{position:absolute;pointer-events:none;opacity:.22;}
+.orn.tl{top:-40px;left:-40px;}
+.orn.br{bottom:-40px;right:-40px;transform:rotate(20deg);}
+
+/* Floating blob backdrop for playful sections */
+.blob-field{position:absolute;inset:0;pointer-events:none;z-index:0;}
+.blob-field .float-shape{opacity:.5;}
+
+/* ========================================================
+   SCROLL REVEAL (henna elegance)
+======================================================== */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease, transform .9s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+.reveal-scale{opacity:0;transform:scale(.94);transition:opacity 1s ease, transform 1s ease;}
+.reveal-scale.in{opacity:1;transform:scale(1);}
+
+/* ========================================================
+   CARDS — Face painting (playful)
+======================================================== */
+.fp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;position:relative;z-index:1;}
+.fp-card{
+  background:#fff;border-radius:var(--radius-lg);padding:30px 26px;
+  box-shadow:var(--shadow-soft);border:2px solid transparent;
+  transition:transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .35s ease, border-color .35s ease;
+  position:relative;
+}
+.fp-card:hover{transform:translateY(-10px) rotate(-1deg);box-shadow:0 26px 50px rgba(255,107,91,.28);border-color:rgba(255,107,91,.35);}
+.fp-card .icon-badge{
+  width:58px;height:58px;border-radius:20px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+  background:linear-gradient(135deg,var(--fp-coral),var(--fp-yellow));
+  transition:transform .35s ease;
+}
+.fp-card:hover .icon-badge{transform:scale(1.12) rotate(6deg);}
+.fp-card h3{font-family:'Baloo 2',sans-serif;font-size:1.28rem;}
+.fp-card p{font-size:.94rem;color:var(--ink-soft);margin-bottom:0;}
+
+/* ========================================================
+   CARDS — Henna (elegant)
+======================================================== */
+.hn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(232,205,138,.18);border:1px solid rgba(232,205,138,.25);position:relative;z-index:1;border-radius:var(--radius-md);overflow:hidden;}
+.hn-card{background:var(--hn-brown);padding:38px 30px;transition:background .5s ease;}
+.hn-card:hover{background:var(--hn-brown-2);}
+.hn-card .rule{width:34px;height:1px;background:var(--hn-gold);margin-bottom:18px;transition:width .5s ease;}
+.hn-card:hover .rule{width:60px;}
+.hn-card h3{font-size:1.4rem;letter-spacing:.01em;}
+.hn-card p{font-size:.95rem;}
+
+/* ========================================================
+   EVENT EXPERIENCE (bridge / neutral)
+======================================================== */
+.ev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;}
+.ev-card{
+  background:#fff;border-radius:var(--radius-md);padding:32px 26px;text-align:center;
+  border:1px solid rgba(36,24,18,.08);box-shadow:0 10px 28px rgba(36,24,18,.06);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.ev-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(36,24,18,.12);}
+.ev-card .ico{width:52px;height:52px;margin:0 auto 16px;color:var(--hn-gold);}
+.ev-card h3{font-family:'Marcellus',serif;font-weight:400;font-size:1.2rem;}
+.ev-card p{color:var(--ink-soft);font-size:.92rem;margin-bottom:0;}
+
+/* ========================================================
+   TESTIMONIALS
+======================================================== */
+.testi-wrap{position:relative;}
+.testi-track{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+.testi-card{
+  background:rgba(244,234,215,.06);border:1px solid rgba(232,205,138,.22);
+  border-radius:var(--radius-md);padding:34px 28px;position:relative;
+}
+.testi-card .q{font-family:'Marcellus',serif;font-size:2.4rem;color:var(--hn-gold);line-height:.4;display:block;margin-bottom:18px;}
+.testi-card p.msg{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.18rem;color:#f4ead7;margin-bottom:18px;}
+.testi-name{font-family:'Manrope',sans-serif;font-weight:700;font-size:.85rem;color:var(--hn-gold-2);}
+.testi-role{font-size:.78rem;color:rgba(244,234,215,.55);}
+
+/* ========================================================
+   INSTAGRAM PREVIEW
+======================================================== */
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative;z-index:1;}
+.ig-tile{
+  aspect-ratio:1;border-radius:18px;position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;padding:14px;font-family:'Baloo 2',sans-serif;font-weight:700;color:#fff;
+  font-size:.85rem;transition:transform .35s ease;background-size:cover;background-position:center;
+}
+.ig-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.45));}
+.ig-tile span{position:relative;z-index:1;}
+.ig-tile:hover{transform:scale(1.05) rotate(-1deg);}
+
+/* ========================================================
+   ABOUT
+======================================================== */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start;}
+.about-list li{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-top:1px solid rgba(36,24,18,.08);}
+.about-list li:first-child{border-top:none;}
+.about-list .dot{width:10px;height:10px;border-radius:50%;margin-top:7px;flex:none;background:linear-gradient(135deg,var(--fp-coral),var(--hn-gold));}
+.about-list h4{margin-bottom:2px;font-family:'Manrope',sans-serif;font-size:1.02rem;}
+.about-list p{margin:0;font-size:.9rem;color:var(--ink-soft);}
+.about-panel{
+  background:linear-gradient(160deg,var(--hn-brown),var(--hn-brown-2));
+  border-radius:var(--radius-lg);padding:36px 30px;color:var(--hn-ivory);
+}
+.about-panel .stat{display:flex;justify-content:space-between;padding:14px 0;border-top:1px solid rgba(232,205,138,.18);}
+.about-panel .stat:first-of-type{border-top:none;}
+.about-panel .stat b{font-family:'Marcellus',serif;font-weight:400;color:var(--hn-gold-2);font-size:1.05rem;}
+.about-panel .stat span{font-size:.85rem;color:rgba(244,234,215,.65);}
+
+/* ========================================================
+   SERVICES sub-sections
+======================================================== */
+.services-nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
+.svc-pill{padding:9px 18px;border-radius:999px;font-size:.82rem;font-weight:700;border:1px solid rgba(36,24,18,.15);color:var(--ink-soft);}
+.svc-pill:hover{border-color:var(--fp-coral);color:var(--fp-coral);}
+.quote-note{
+  display:inline-flex;align-items:center;gap:10px;margin-top:8px;padding:10px 18px;border-radius:999px;
+  font-size:.85rem;font-weight:700;
+}
+.quote-note.pl{background:rgba(255,107,91,.1);color:#c1402e;}
+.quote-note.hn{background:rgba(232,205,138,.12);color:var(--hn-gold-2);}
+.quote-note.nt{background:rgba(36,24,18,.06);color:var(--ink-soft);}
+
+/* ========================================================
+   GALLERY
+======================================================== */
+.filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px;}
+.filter-btn{
+  padding:10px 20px;border-radius:999px;font-size:.85rem;font-weight:700;
+  border:2px solid rgba(36,24,18,.12);color:var(--ink-soft);transition:.25s ease;
+  font-family:'Baloo 2',sans-serif;
+}
+.filter-btn:hover{border-color:var(--fp-coral);}
+.filter-btn.active{background:linear-gradient(120deg,var(--fp-coral),var(--fp-purple));color:#fff;border-color:transparent;}
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px;}
+.gal-tile{
+  aspect-ratio:4/5;border-radius:var(--radius-md);position:relative;overflow:hidden;cursor:pointer;
+  transition:transform .4s ease, box-shadow .4s ease;background-size:cover;background-position:center;
+}
+.gal-tile:hover{transform:translateY(-8px);box-shadow:0 24px 44px rgba(36,24,18,.22);}
+.gal-tile .zoom{
+  position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:#fff;
+  display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.7);transition:.3s ease;
+}
+.gal-tile:hover .zoom{opacity:1;transform:scale(1);}
+.gal-cap{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.55));color:#fff;}
+.gal-cap span{display:block;font-weight:800;font-size:.95rem;}
+.gal-cap small{font-size:.72rem;opacity:.85;text-transform:uppercase;letter-spacing:.08em;}
+
+.lightbox{
+  position:fixed;inset:0;z-index:900;background:rgba(20,12,8,.86);backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:center;padding:24px;
+  opacity:0;pointer-events:none;transition:opacity .3s ease;
+}
+.lightbox.open{opacity:1;pointer-events:auto;}
+.lb-box{max-width:520px;width:100%;background:var(--cream);border-radius:var(--radius-lg);overflow:hidden;transform:scale(.92);transition:transform .3s ease;}
+.lightbox.open .lb-box{transform:scale(1);}
+.lb-frame{aspect-ratio:4/3;background-size:cover;background-position:center;}
+.lb-info{padding:24px 26px;}
+.lb-nav{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;}
+.lb-nav button{color:#fff;font-weight:700;display:flex;align-items:center;gap:8px;}
+.lb-close{position:absolute;top:18px;right:22px;color:#fff;font-size:1.6rem;z-index:2;}
+
+/* ========================================================
+   FAQ
+======================================================== */
+.faq-item{border-bottom:1px solid rgba(232,205,138,.2);}
+.faq-q{
+  width:100%;text-align:left;display:flex;justify-content:space-between;align-items:center;
+  padding:22px 4px;font-family:'Marcellus',serif;font-size:1.08rem;color:#f4ead7;
+}
+.faq-q .plus{font-size:1.3rem;color:var(--hn-gold);transition:transform .3s ease;flex:none;margin-left:16px;}
+.faq-item.open .plus{transform:rotate(135deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.faq-a p{padding:0 4px 22px;color:rgba(244,234,215,.72);font-size:.94rem;max-width:64ch;}
+
+/* ========================================================
+   CONTACT
+======================================================== */
+.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start;}
+.form-card{background:#fff;border-radius:var(--radius-lg);padding:36px;box-shadow:var(--shadow-soft);}
+.field{margin-bottom:18px;}
+.field label{display:block;font-size:.82rem;font-weight:700;margin-bottom:7px;color:var(--ink-soft);}
+.field input,.field select,.field textarea{
+  width:100%;padding:13px 16px;border-radius:12px;border:1.5px solid rgba(36,24,18,.14);
+  background:#fffdf9;transition:border-color .2s ease, box-shadow .2s ease;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--fp-coral);box-shadow:0 0 0 4px rgba(255,107,91,.12);
+}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.success-box{display:none;margin-top:18px;padding:16px 18px;border-radius:14px;background:rgba(51,182,168,.12);color:#1d7d71;font-weight:700;font-size:.9rem;}
+.success-box.show{display:block;}
+
+.info-card{background:linear-gradient(160deg,var(--hn-brown),var(--hn-brown-2));color:var(--hn-ivory);border-radius:var(--radius-lg);padding:38px 32px;}
+.info-card h3{font-family:'Marcellus',serif;font-weight:400;font-size:1.5rem;}
+.info-row{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-top:1px solid rgba(232,205,138,.16);}
+.info-row:first-of-type{border-top:none;padding-top:22px;}
+.info-row .ico{width:22px;height:22px;color:var(--hn-gold);flex:none;margin-top:2px;}
+.info-row b{display:block;font-family:'Manrope',sans-serif;font-size:.92rem;color:#fbf1de;}
+.info-row span{font-size:.86rem;color:rgba(244,234,215,.7);}
+
+/* ========================================================
+   FOOTER
+======================================================== */
+footer{background:var(--ink);color:var(--cream);padding:70px 0 26px;}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr 1fr;gap:32px;padding-bottom:44px;}
+footer h5{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--hn-gold-2);margin-bottom:16px;}
+footer ul li{padding:6px 0;font-size:.9rem;color:rgba(255,248,238,.72);}
+footer ul li a:hover{color:var(--fp-yellow);}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:26px;border-top:1px solid rgba(255,248,238,.12);font-size:.78rem;color:rgba(255,248,238,.5);}
+
+/* ========================================================
+   RESPONSIVE
+======================================================== */
+@media (max-width:900px){
+  .about-grid,.contact-grid{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:760px){
+  nav.mainnav{
+    position:fixed;top:66px;left:0;right:0;background:var(--cream);flex-direction:column;align-items:stretch;
+    padding:14px;gap:4px;box-shadow:0 16px 30px rgba(36,24,18,.1);
+    transform:translateY(-140%);opacity:0;transition:transform .3s ease, opacity .3s ease;border-radius:0 0 20px 20px;
+  }
+  nav.mainnav.open{transform:translateY(0);opacity:1;}
+  .navlink{padding:14px 16px;}
+  .nav-cta{margin-left:0;margin-top:6px;text-align:center;justify-content:center;}
+  .burger{display:flex;}
+  .hero-half.playful{clip-path:none;}
+  .hero-half.henna{display:none;}
+  .seam-glow{display:none;}
+
+  .hero{min-height:auto;padding:118px 0 56px;}
+  .hero-inner{padding:0 16px;}
+  .hero-panel{width:100%;max-width:100%;box-sizing:border-box;padding:30px 20px;border-radius:22px;}
+  .hero h1{font-size:clamp(1.7rem,7.5vw,2.3rem);max-width:100%;}
+  .hero .sub{font-size:1rem;max-width:100%;}
+  .hero-tag{white-space:normal;text-align:center;}
+  .hero-ctas{flex-direction:column;width:100%;}
+  .hero-ctas .btn{width:100%;}
+
+  .btn{white-space:normal;text-align:center;}
+  .ig-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:420px){
+  .hero-shapes .corner-shape:nth-of-type(2),
+  .hero-shapes .corner-shape:nth-of-type(4){display:none;}
+  section.block{padding:64px 0;}
+  .field-row{grid-template-columns:1fr;}
+  .hero-panel{padding:26px 16px;}
+}
+
+/* ========================================================
+   GALLERY — THEME SECTIONS & PLACEHOLDER GRID
+   (used on Kids Themes gallery + Superheroes / Halloween /
+   Christmas / Henna Designs pages)
+======================================================== */
+.theme-section{margin-bottom:52px;}
+.theme-section:last-of-type{margin-bottom:0;}
+.theme-section-head{display:flex;align-items:baseline;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
+.theme-section-head h3{font-family:'Baloo 2',sans-serif;font-size:1.3rem;margin:0;color:var(--ink);}
+.theme-section-head span{font-size:.78rem;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.08em;}
+.theme-henna .theme-section-head h3{font-family:'Marcellus',serif;font-weight:400;color:#fbf1de;letter-spacing:.02em;}
+.theme-henna .theme-section-head span{color:rgba(244,234,215,.6);}
+
+.ph-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+@media (min-width:600px){.ph-grid{grid-template-columns:repeat(3,1fr);gap:20px;}}
+@media (min-width:980px){.ph-grid{grid-template-columns:repeat(4,1fr);}}
+.ph-box{
+  aspect-ratio:4/5;border-radius:var(--radius-md);
+  background:linear-gradient(135deg, rgba(255,107,91,.10), rgba(154,111,224,.12));
+  border:2px dashed rgba(36,24,18,.16);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  color:var(--ink-soft);font-family:'Baloo 2',sans-serif;font-weight:700;font-size:.78rem;
+  text-align:center;padding:10px;cursor:pointer;
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s ease, border-color .3s ease;
+}
+.ph-box:hover{transform:scale(1.05);box-shadow:0 16px 32px rgba(36,24,18,.18);border-color:rgba(255,107,91,.4);}
+.ph-box svg{width:26px;height:26px;opacity:.55;}
+.ph-box.has-photo{
+  border-style:solid;padding:0;overflow:hidden;background:#000;
+}
+.ph-box.has-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.theme-henna .ph-box{
+  background:linear-gradient(135deg, rgba(201,162,75,.14), rgba(107,42,38,.28));
+  border-color:rgba(232,205,138,.32);color:rgba(244,234,215,.82);
+  font-family:'Marcellus',serif;font-weight:400;
+}
+.theme-henna .ph-box:hover{border-color:var(--hn-gold);box-shadow:0 16px 32px rgba(0,0,0,.35);}
+
+.page-banner{padding:150px 0 56px;text-align:center;position:relative;overflow:hidden;}
+.page-banner .section-head{margin:0 auto;}
+.page-banner p.sub{max-width:56ch;margin:14px auto 0;}
+.theme-henna .page-banner p.sub{color:rgba(244,234,215,.78);}
+.gallery-more{margin-top:60px;padding-top:44px;border-top:1px solid rgba(36,24,18,.08);}
+.theme-henna .gallery-more{border-top-color:rgba(232,205,138,.18);}
+@media (max-width:760px){
+  .page-banner{padding:126px 0 44px;}
+}
+
+/* ========================================================
+   KIDS THEMES — DISNEY MAGIC SECTION THEME (pastel rainbow)
+======================================================== */
+#gallery{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 15% 18%, rgba(255,158,203,.42), transparent 45%),
+    radial-gradient(circle at 85% 12%, rgba(255,224,138,.36), transparent 45%),
+    radial-gradient(circle at 50% 95%, rgba(138,217,255,.28), transparent 55%),
+    linear-gradient(150deg,#6b3fa0 0%,#9451c4 45%,#c05a9e 100%);
+}
+#gallery .wrap{position:relative;z-index:2;}
+#gallery .eyebrow{color:#ffe08a;}
+#gallery .eyebrow::before{background:#ffe08a;}
+#gallery .section-head h2{
+  background:linear-gradient(90deg,#ffc3e0,#fff0b8 33%,#d4b3ff 66%,#b3ecff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:
+    drop-shadow(0 0 10px rgba(255,255,255,.55))
+    drop-shadow(0 0 24px rgba(255,158,203,.65))
+    drop-shadow(0 0 46px rgba(185,138,255,.5));
+  animation:disneyShimmer 5s ease-in-out infinite;
+}
+#gallery .section-head p{color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.55);}
+#gallery .theme-section-head h3{color:#fff;text-shadow:0 0 10px rgba(255,224,138,.4);}
+#gallery .ph-box{
+  background:rgba(255,255,255,.08);
+  border:2px dashed rgba(255,224,138,.5);
+  color:#fff;
+}
+#gallery .ph-box svg{opacity:.75;}
+#gallery .ph-box:hover{
+  transform:scale(1.06) rotate(1deg);
+  border-color:#ffe08a;
+  box-shadow:0 0 22px rgba(255,158,203,.5),0 0 46px rgba(185,138,255,.4);
+}
+#gallery .gallery-more{border-top-color:rgba(255,224,138,.25);}
+#gallery .btn-outline-ink{border-color:rgba(255,255,255,.6);color:#fff;}
+#gallery .btn-outline-ink:hover{background:#fff;color:#6b3fa0;}
+@keyframes disneyShimmer{
+  0%,100%{
+    filter:
+      drop-shadow(0 0 10px rgba(255,255,255,.55))
+      drop-shadow(0 0 24px rgba(255,158,203,.65))
+      drop-shadow(0 0 46px rgba(185,138,255,.5))
+      brightness(1.05);
+  }
+  50%{
+    filter:
+      drop-shadow(0 0 16px rgba(255,255,255,.75))
+      drop-shadow(0 0 36px rgba(255,224,138,.75))
+      drop-shadow(0 0 64px rgba(138,217,255,.55))
+      brightness(1.3);
+  }
+}
+
+.magic-field{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.pixie-dot{position:absolute;border-radius:50%;background:#fff;animation:pixieTwinkle ease-in-out infinite;}
+@keyframes pixieTwinkle{
+  0%,100%{opacity:.15;transform:scale(.7);}
+  50%{opacity:1;transform:scale(1.2);}
+}
+.firework{position:absolute;border-radius:50%;animation:fireworkPop ease-out infinite;}
+@keyframes fireworkPop{
+  0%{transform:scale(0);opacity:0;}
+  30%{opacity:.9;}
+  70%{transform:scale(1);opacity:.5;}
+  100%{transform:scale(1.4);opacity:0;}
+}
+.castle-glow{animation:castleGlow 6s ease-in-out infinite;}
+@keyframes castleGlow{
+  0%,100%{opacity:.45;}
+  50%{opacity:.8;}
+}
+.dust-trail{animation:dustDrift 10s ease-in-out infinite;}
+@keyframes dustDrift{
+  0%,100%{transform:translateY(0) translateX(0);}
+  50%{transform:translateY(-16px) translateX(10px);}
+}
+.rainbow-arc{animation:arcFade 7s ease-in-out infinite;}
+@keyframes arcFade{
+  0%,100%{opacity:.35;}
+  50%{opacity:.7;}
+}
+@media (prefers-reduced-motion:reduce){
+  #gallery .section-head h2,.pixie-dot,.firework,.castle-glow,.dust-trail,.rainbow-arc{animation:none;}
+}
+
+/* ========================================================
+   SUPERHEROES — MARVEL COMIC SECTION THEME
+======================================================== */
+#superheroes{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255,255,255,.10), transparent 55%),
+    linear-gradient(150deg,#8a0303 0%,#5c0202 50%,#0a0a0a 100%);
+  border-top:10px solid #0a0a0a;
+  border-bottom:10px solid #0a0a0a;
+}
+/* halftone comic-print dots */
+#superheroes::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(rgba(0,0,0,.4) 1.6px, transparent 1.6px);
+  background-size:12px 12px;opacity:.55;mix-blend-mode:multiply;
+}
+#superheroes .wrap{position:relative;z-index:2;}
+
+/* rotating starburst rays behind the heading, classic comic-cover style */
+#superheroes .section-head{position:relative;isolation:isolate;}
+#superheroes .section-head::before{
+  content:"";position:absolute;top:46%;left:50%;
+  width:820px;height:820px;max-width:220vw;
+  transform:translate(-50%,-50%);
+  background:repeating-conic-gradient(from 0deg, rgba(255,255,255,.10) 0deg 4deg, transparent 4deg 16deg);
+  animation:raySpin 70s linear infinite;
+  z-index:-1;pointer-events:none;
+}
+@keyframes raySpin{ to{ transform:translate(-50%,-50%) rotate(360deg); } }
+
+#superheroes .eyebrow{color:#ffd400;}
+#superheroes .eyebrow::before{background:#ffd400;}
+#superheroes .section-head h2{
+  color:#fff;
+  -webkit-text-stroke:1.2px #0a0a0a;
+  text-shadow:3px 3px 0 #0a0a0a, 0 0 26px rgba(255,212,0,.45);
+}
+#superheroes .section-head p{
+  color:#fff;
+  text-shadow:0 2px 6px rgba(0,0,0,.65);
+}
+#superheroes .theme-section-head h3{
+  color:#fff;text-shadow:2px 2px 0 #0a0a0a, 0 0 12px rgba(255,212,0,.3);
+}
+#superheroes .ph-box{
+  background:rgba(10,10,10,.55);
+  border:2px dashed rgba(255,212,0,.5);
+  color:#fff;
+}
+#superheroes .ph-box svg{opacity:.75;}
+#superheroes .ph-box:hover{
+  transform:scale(1.06) rotate(-1deg);
+  border-color:#ffd400;
+  box-shadow:0 0 24px rgba(255,212,0,.5),0 0 48px rgba(138,3,3,.5);
+}
+
+/* diagonal motion sweeps drifting across the panel */
+.impact-field{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.impact-stripe{
+  position:absolute;top:-40%;width:70px;height:180%;
+  background:linear-gradient(180deg, transparent, rgba(255,255,255,.10), transparent);
+  transform:rotate(14deg);
+  animation:stripeSlide linear infinite;
+}
+@keyframes stripeSlide{
+  0%{left:-12%;}
+  100%{left:112%;}
+}
+
+/* pulsing comic star badge */
+.comic-badge{animation:badgePulse 3s ease-in-out infinite;}
+@keyframes badgePulse{
+  0%,100%{transform:scale(1) rotate(-6deg);}
+  50%{transform:scale(1.08) rotate(-2deg);}
+}
+
+/* large low-opacity shield watermark, slow drift */
+.shield-mark{animation:shieldDrift 12s ease-in-out infinite;}
+@keyframes shieldDrift{
+  0%,100%{transform:translateY(0) rotate(-8deg);}
+  50%{transform:translateY(-14px) rotate(-4deg);}
+}
+
+@media (prefers-reduced-motion: reduce){
+  #superheroes .section-head::before,.impact-stripe,.comic-badge,.shield-mark{animation:none;}
+}
+
+/* ========================================================
+   HALLOWEEN — SPOOKY SECTION THEME
+======================================================== */
+#halloween{
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,140,0,.18), transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(154,111,224,.24), transparent 50%),
+    linear-gradient(160deg,#1c1024,#2b1636 55%,#1c1024);
+  position:relative;overflow:hidden;
+}
+#halloween .wrap{position:relative;z-index:1;}
+#halloween .eyebrow{color:#ff9d4d;}
+#halloween .eyebrow::before{background:#ff9d4d;}
+#halloween .section-head h2{
+  color:#fff2df;
+  text-shadow:0 0 14px rgba(255,140,0,.55), 0 0 30px rgba(154,111,224,.4);
+  animation:spookyFlicker 4.4s ease-in-out infinite;
+}
+#halloween .section-head p{color:rgba(244,234,215,.75);}
+#halloween .theme-section-head h3{color:#ffe3b0;text-shadow:0 0 10px rgba(255,140,0,.35);}
+#halloween .ph-box{
+  background:linear-gradient(150deg, rgba(154,111,224,.18), rgba(255,140,0,.1));
+  border:2px dashed rgba(255,157,77,.35);
+  color:rgba(244,234,215,.85);
+}
+#halloween .ph-box svg{opacity:.65;}
+#halloween .ph-box:hover{
+  transform:scale(1.06) rotate(-1deg);
+  border-color:#ff9d4d;
+  box-shadow:0 0 26px rgba(255,140,0,.45),0 0 54px rgba(154,111,224,.35);
+}
+
+@keyframes spookyFlicker{
+  0%,100%{opacity:1;}
+  4%{opacity:.8;}
+  8%{opacity:1;}
+  41%{opacity:1;}
+  43%{opacity:.65;}
+  45%{opacity:1;}
+  72%{opacity:.9;}
+  74%{opacity:1;}
+}
+
+.spooky-field{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.spooky-item{position:absolute;}
+.bat{animation:batFly 10s linear infinite;}
+.bat.b2{animation-duration:13s;animation-delay:2.2s;}
+.bat.b3{animation-duration:8s;animation-delay:4.4s;}
+@keyframes batFly{
+  0%{transform:translate(-10vw,10px) scale(.85);opacity:0;}
+  8%{opacity:.9;}
+  50%{transform:translate(48vw,-32px) scale(1.05);}
+  92%{opacity:.9;}
+  100%{transform:translate(108vw,14px) scale(.85);opacity:0;}
+}
+.ghost{animation:ghostFloat 6.5s ease-in-out infinite;}
+@keyframes ghostFloat{
+  0%,100%{transform:translateY(0) translateX(0) rotate(-2deg);opacity:.55;}
+  50%{transform:translateY(-24px) translateX(10px) rotate(2deg);opacity:.9;}
+}
+.jack-glow{animation:jackPulse 3.2s ease-in-out infinite;}
+@keyframes jackPulse{
+  0%,100%{opacity:.45;transform:scale(1);}
+  50%{opacity:1;transform:scale(1.18);}
+}
+.spider{animation:spiderDrop 5.5s ease-in-out infinite;}
+@keyframes spiderDrop{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(20px);}
+}
+@media (prefers-reduced-motion: reduce){
+  #halloween .section-head h2,.bat,.ghost,.jack-glow,.spider{animation:none;}
+}
+
+/* ========================================================
+   CHRISTMAS — FESTIVE SECTION THEME
+======================================================== */
+#christmas{
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255,215,140,.18), transparent 45%),
+    radial-gradient(circle at 84% 74%, rgba(255,107,91,.16), transparent 50%),
+    linear-gradient(160deg,#0d2b28,#123a34 55%,#0d2622);
+  position:relative;overflow:hidden;
+}
+#christmas .wrap{position:relative;z-index:2;}
+#christmas .eyebrow{color:#ffd76b;}
+#christmas .eyebrow::before{background:#ffd76b;}
+#christmas .section-head h2{
+  color:#fff6e6;
+  text-shadow:0 0 16px rgba(255,215,107,.5),0 0 34px rgba(255,107,91,.32);
+  animation:xmasGlow 4.6s ease-in-out infinite;
+}
+#christmas .section-head p{color:rgba(244,234,215,.78);}
+#christmas .theme-section-head h3{color:#ffe9c2;text-shadow:0 0 10px rgba(255,215,107,.32);}
+#christmas .ph-box{
+  background:linear-gradient(150deg, rgba(51,182,168,.16), rgba(255,107,91,.10));
+  border:2px dashed rgba(255,215,107,.35);
+  color:rgba(244,234,215,.85);
+}
+#christmas .ph-box svg{opacity:.65;}
+#christmas .ph-box:hover{
+  transform:scale(1.06) rotate(1deg);
+  border-color:#ffd76b;
+  box-shadow:0 0 24px rgba(255,215,107,.45),0 0 50px rgba(51,182,168,.32);
+}
+@keyframes xmasGlow{
+  0%,100%{opacity:1;}
+  45%{opacity:1;}
+  50%{opacity:.86;}
+  55%{opacity:1;}
+}
+
+/* soft pop-up as each theme comes into view (reuses .reveal-scale) */
+#christmas .theme-section.reveal-scale{transition-duration:1.1s;}
+
+.winter-field{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.snowflake{position:absolute;top:-6%;border-radius:50%;background:#fff;box-shadow:0 0 6px rgba(255,255,255,.55);animation:snowFall linear infinite;}
+@keyframes snowFall{
+  0%{transform:translateY(-8%) translateX(0);opacity:0;}
+  8%{opacity:.9;}
+  92%{opacity:.9;}
+  100%{transform:translateY(112%) translateX(24px);opacity:0;}
+}
+.xmas-sparkle{position:absolute;width:6px;height:6px;border-radius:50%;background:#ffe9c2;box-shadow:0 0 10px 3px rgba(255,233,194,.65);opacity:0;animation:sparkleTwinkle 3.4s ease-in-out infinite;}
+@keyframes sparkleTwinkle{
+  0%,100%{opacity:0;transform:scale(.4);}
+  50%{opacity:1;transform:scale(1.15);}
+}
+
+.sleigh-wrap{
+  position:absolute;top:6%;left:0;z-index:1;pointer-events:none;width:200px;
+  animation:sleighFly 24s ease-in-out infinite;
+  filter:drop-shadow(0 8px 16px rgba(0,0,0,.35));
+}
+.sleigh-wrap svg{width:100%;height:auto;display:block;}
+@keyframes sleighFly{
+  0%{transform:translate(-25vw,60px) scale(.85);opacity:0;}
+  8%{opacity:1;}
+  50%{transform:translate(55vw,-20px) scale(1);}
+  92%{opacity:1;}
+  100%{transform:translate(130vw,50px) scale(.85);opacity:0;}
+}
+@media (max-width:760px){
+  .sleigh-wrap{width:140px;}
+}
+.fairy-lights{position:absolute;top:0;left:0;width:100%;height:64px;z-index:2;pointer-events:none;}
+.fairy-lights .wire{fill:none;stroke:rgba(244,234,215,.32);stroke-width:1.5;}
+.fairy-lights .bulb{transform-box:fill-box;transform-origin:center;filter:drop-shadow(0 0 5px currentColor);animation:bulbTwinkle 2.4s ease-in-out infinite;}
+@keyframes bulbTwinkle{
+  0%,100%{opacity:.45;transform:scale(.82);}
+  50%{opacity:1;transform:scale(1.18);}
+}
+@media (prefers-reduced-motion: reduce){
+  .fairy-lights .bulb{animation:none;opacity:.85;}
+}
+@media (prefers-reduced-motion: reduce){
+  #christmas .section-head h2,.snowflake,.xmas-sparkle,.sleigh-wrap{animation:none;}
+  .snowflake,.xmas-sparkle{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="headbar">
+    <a href="#home" class="logo" aria-label="Luxe Face Painting & Henna — home">
+      <span class="logo-main"><b>Luxe</b><i>&nbsp;Studio</i></span>
+      <span class="logo-sub">Face Painting &amp; Henna · London</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="mainnav" id="mainnav">
+      <a class="navlink" href="#home">Home</a>
+      <a class="navlink" href="#about">About</a>
+      <a class="navlink" href="#services">Services</a>
+      <a class="navlink" href="#gallery">Kids Themes</a>
+      <a class="navlink" href="#superheroes">Superheroes</a>
+      <a class="navlink" href="#halloween">Halloween</a>
+      <a class="navlink" href="#christmas">Christmas</a>
+      <a class="navlink" href="#henna-designs">Henna Designs</a>
+      <a class="navlink" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-half playful"></div>
+  <div class="hero-half henna"></div>
+  <div class="seam-glow"></div>
+
+  <div class="hero-shapes">
+    <svg class="float-shape corner-shape" style="top:7%;left:3%;animation-delay:.2s;" width="40" height="40" viewBox="0 0 24 24"><path fill="#ff8fb1" d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg>
+    <svg class="float-shape corner-shape" style="bottom:7%;left:3%;animation-delay:1.1s;" width="26" height="26" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="#ffc94d"/></svg>
+    <svg class="float-shape corner-shape" style="top:7%;right:3%;animation-delay:2s;" width="30" height="30" viewBox="0 0 24 24"><path fill="#33b6a8" d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg>
+    <svg class="float-shape corner-shape" style="bottom:7%;right:3%;animation-delay:.6s;" width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="#9a6fe0"/></svg>
+    <svg class="mandala" style="top:8%;right:4%;" width="180" height="180" viewBox="0 0 200 200"><g fill="none" stroke="#e8cd8a" stroke-width="1"><circle cx="100" cy="100" r="90"/><circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="50" stroke-dasharray="4 6"/><path d="M100 10v180M10 100h180M35 35l130 130M165 35L35 165"/></g></svg>
+    <svg class="mandala" style="bottom:-10%;right:16%;animation-duration:130s;" width="140" height="140" viewBox="0 0 200 200"><g fill="none" stroke="#e8cd8a" stroke-width="1"><circle cx="100" cy="100" r="80" stroke-dasharray="3 8"/><circle cx="100" cy="100" r="55"/></g></svg>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-panel">
+    <div class="hero-tag">✦ Trusted across London · Weddings, festivals &amp; parties ✦</div>
+    <h1><span class="hl-playful">Luxe Face Painting</span> <span class="hl-henna">&amp; Henna</span> Services in London</h1>
+    <p class="sub">Bringing creativity, culture, and elegance to your events — from magical kids' parties to intricate bridal henna, hand-crafted for every celebration.</p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/447498415011?text=Hi%20Luxe%2C%20I%27d%20like%20to%20enquire%20about%20booking" target="_blank" rel="noopener" class="btn" style="background:#25D366;color:#fff;">WhatsApp Us</a>
+      <a href="#gallery" class="btn btn-gold">View Gallery</a>
+    </div>
+    <p style="margin-top:18px;font-size:.85rem;color:var(--ink-soft);">or <a href="#contact" style="font-weight:700;text-decoration:underline;color:var(--fp-coral);">enquire online</a> for a personalised quote</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FACE PAINTING PREVIEW ============ -->
+<section class="block theme-playful" id="preview-facepaint">
+  <div class="blob-field">
+    <svg class="float-shape" style="top:10%;right:6%;animation-delay:.4s;" width="40" height="40" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="#ffc94d"/></svg>
+    <svg class="float-shape" style="bottom:8%;left:4%;animation-delay:1.4s;" width="34" height="34" viewBox="0 0 24 24"><path fill="#ff8fb1" d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">🎨 Face Painting</span>
+      <h2 class="fp-font magic-font" style="font-size:clamp(1.9rem,3.8vw,2.9rem);">Playful, magical &amp; larger than life</h2>
+      <p style="color:var(--ink-soft);max-width:56ch;">Bright colours, glitter and imagination for kids' parties, festivals and family fun days across London.</p>
+    </div>
+    <div class="fp-grid">
+      <div class="fp-card">
+        <div class="icon-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 0-7 3-7 7 0 3 2 5 3 6l1 3h6l1-3c1-1 3-3 3-6 0-4-3-7-7-7z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><circle cx="9" cy="10" r="1" fill="#fff"/><circle cx="15" cy="10" r="1" fill="#fff"/></svg></div>
+        <h3>Kids Parties</h3>
+        <p>Rainbows, unicorns, superheroes and Disney-inspired designs that light up any birthday.</p>
+      </div>
+      <div class="fp-card">
+        <div class="icon-badge" style="background:linear-gradient(135deg,var(--fp-teal),var(--fp-purple));"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 20V10l8-6 8 6v10" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 20v-6h6v6" stroke="#fff" stroke-width="1.8"/></svg></div>
+        <h3>Festivals &amp; Events</h3>
+        <p>Fast, flawless designs for festival stalls, vendor markets and high-footfall celebrations.</p>
+      </div>
+      <div class="fp-card">
+        <div class="icon-badge" style="background:linear-gradient(135deg,var(--fp-purple),var(--fp-pink));"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.6"/></svg></div>
+        <h3>Themed Creative Designs</h3>
+        <p>Bespoke concepts tailored to your event's theme, colours and characters.</p>
+      </div>
+    </div>
+    <div style="margin-top:36px;"><a href="#services-facepaint" class="btn btn-ghost-playful">See all Face Painting services →</a></div>
+  </div>
+</section>
+
+<div class="seam-divider p-to-h">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><path class="seam-line seam-thread" d="M0 32 C 200 8, 300 56, 500 30 S 800 8, 1000 34 S 1150 20 1200 32"/></svg>
+</div>
+
+<!-- ============ HENNA PREVIEW ============ -->
+<section class="block theme-henna" id="preview-henna">
+  <svg class="orn tl" width="220" height="220" viewBox="0 0 200 200"><g fill="none" stroke="#e8cd8a" stroke-width="1"><circle cx="0" cy="0" r="90"/><circle cx="0" cy="0" r="60" stroke-dasharray="3 7"/><path d="M0 0 L90 0 M0 0 L0 90 M0 0 L64 64"/></g></svg>
+  <svg class="orn br" width="220" height="220" viewBox="0 0 200 200"><g fill="none" stroke="#e8cd8a" stroke-width="1"><circle cx="200" cy="200" r="90"/><circle cx="200" cy="200" r="60" stroke-dasharray="3 7"/></g></svg>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow gold">🌙 Henna</span>
+      <h2 style="font-size:clamp(1.7rem,3.4vw,2.6rem);">Elegant, ornamental &amp; steeped in tradition</h2>
+      <p class="hn-script" style="font-size:1.15rem;color:rgba(244,234,215,.75);max-width:56ch;">Fine-line mehndi artistry rooted in Mughal ornament, for brides, festivals and cultural celebrations.</p>
+    </div>
+    <div class="hn-grid reveal">
+      <div class="hn-card"><div class="rule"></div><h3>Bridal Henna</h3><p>Full bridal mehndi with intricate, personalised linework for your most important day.</p></div>
+      <div class="hn-card"><div class="rule"></div><h3>Eid &amp; Cultural Events</h3><p>Traditional and contemporary designs for Eid, Diwali and cultural celebrations.</p></div>
+      <div class="hn-card"><div class="rule"></div><h3>Custom Intricate Designs</h3><p>Bespoke patterns designed around your story, symbolism and preferred style.</p></div>
+    </div>
+    <div style="margin-top:36px;" class="reveal"><a href="#services-henna" class="btn btn-outline-gold">See all Henna services →</a></div>
+  </div>
+</section>
+
+<div class="seam-divider h-to-n">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><path class="seam-line seam-thread" d="M0 30 C 200 54, 300 6, 500 32 S 800 56, 1000 28 S 1150 40 1200 30"/></svg>
+</div>
+
+<!-- ============ EVENT EXPERIENCE ============ -->
+<section class="block theme-neutral" id="experience">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow" style="color:var(--hn-gold);">Event Experience</span>
+      <h2 class="hn-font" style="font-size:clamp(1.6rem,3vw,2.3rem);">One studio, every occasion</h2>
+      <p style="color:var(--ink-soft);">From weekend festivals to intimate weddings, Luxe brings the right artistry to every kind of event.</p>
+    </div>
+    <div class="ev-grid reveal">
+      <div class="ev-card">
+        <svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M4 20l4-9 4 9M12 20l4-13 4 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Festivals</h3>
+        <p>High-energy stalls and roaming artistry for festival crowds of every size.</p>
+      </div>
+      <div class="ev-card">
+        <svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.5 5.5L20 9l-4.5 3.9L17 19l-5-3.2L7 19l1.5-6.1L4 9l5.5-1.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        <h3>Parties</h3>
+        <p>Birthdays, school fetes and family celebrations filled with colour and joy.</p>
+      </div>
+      <div class="ev-card">
+        <svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <h3>Weddings</h3>
+        <p>Bridal henna and elegant guest experiences for your wedding week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="seam-divider n-to-h">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><path class="seam-line seam-thread" d="M0 32 C 200 10, 300 54, 500 30 S 800 10, 1000 34 S 1150 22 1200 32"/></svg>
+</div>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="block theme-henna" id="testimonials">
+  <svg class="orn tl" width="200" height="200" viewBox="0 0 200 200"><circle cx="0" cy="0" r="80" fill="none" stroke="#e8cd8a" stroke-width="1"/></svg>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow gold">Client Words</span>
+      <h2 style="font-size:clamp(1.6rem,3vw,2.3rem);">Loved across London's events</h2>
+    </div>
+    <div class="testi-track">
+      <div class="testi-card reveal"><span class="q">“</span><p class="msg">Our daughter's party was transformed — the queue never stopped and every design was flawless.</p><div class="testi-name">Amelia R.</div><div class="testi-role">Birthday party, Wimbledon</div></div>
+      <div class="testi-card reveal"><span class="q">“</span><p class="msg">My bridal henna was the most beautiful part of getting ready. Truly artistry, not just decoration.</p><div class="testi-name">Sara K.</div><div class="testi-role">Bridal henna, wedding week</div></div>
+      <div class="testi-card reveal"><span class="q">“</span><p class="msg">Booked Luxe for our summer festival stall two years running — professional, fast and stunning work.</p><div class="testi-name">Marcus T.</div><div class="testi-role">Festival organiser</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="seam-divider h-to-p">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><path class="seam-line seam-thread" d="M0 30 C 200 54, 300 6, 500 32 S 800 56, 1000 28 S 1150 40 1200 30"/></svg>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="block theme-neutral" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--hn-gold);">About Luxe</span>
+        <h2 class="hn-font" style="font-size:clamp(1.7rem,3.2vw,2.5rem);">Two crafts, one studio, London-wide</h2>
+        <p style="color:var(--ink-soft);font-size:1.05rem;">Luxe Face Painting &amp; Henna is a London-based studio bringing together two distinct art forms — vivid, playful face painting and fine, ornamental henna. Every booking is treated as a bespoke commission, whether it's a children's birthday, a festival stall, or a bride's most important day.</p>
+        <p style="color:var(--ink-soft);">We work with professional, skin-safe materials and a calm, reliable approach that event organisers, venues and families trust to show up prepared and deliver on time, every time.</p>
+        <ul class="about-list" style="margin-top:24px;">
+          <li><span class="dot"></span><div><h4>Kids Parties</h4><p>Birthday parties, school fetes and family fun days, big or small.</p></div></li>
+          <li><span class="dot"></span><div><h4>Festivals &amp; Vendor Events</h4><p>Full-day festival coverage and vendor market bookings across London.</p></div></li>
+          <li><span class="dot"></span><div><h4>Bridal &amp; Cultural Henna</h4><p>Bridal mehndi, Eid celebrations and culturally rooted design work.</p></div></li>
+        </ul>
+      </div>
+      <div class="about-panel reveal">
+        <h3 style="margin-bottom:24px;">Why event organisers choose Luxe</h3>
+        <div class="stat"><span>Coverage</span><b>All of London</b></div>
+        <div class="stat"><span>Speciality</span><b>Face Painting &amp; Henna</b></div>
+        <div class="stat"><span>Booking type</span><b>Bespoke, enquiry-based</b></div>
+        <div class="stat"><span>Materials</span><b>Professional, skin-safe</b></div>
+        <a href="#contact" class="btn btn-gold btn-block" style="margin-top:26px;">Enquire About Availability</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="block theme-playful" id="services">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Services</span>
+      <h2 class="fp-font magic-font" style="font-size:clamp(2rem,4vw,3rem);">What we offer</h2>
+      <p style="color:var(--ink-soft);max-width:60ch;margin:0 auto;">Every booking is quoted individually based on your event size, location and design needs.</p>
+    </div>
+
+    <div id="services-facepaint" style="scroll-margin-top:90px;padding-bottom:16px;">
+      <h3 class="fp-font" style="font-size:1.5rem;">🎨 Face Painting</h3>
+      <div class="fp-grid" style="margin-top:22px;">
+        <div class="fp-card"><div class="icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 0-7 3-7 7 0 3 2 5 3 6l1 3h6l1-3c1-1 3-3 3-6 0-4-3-7-7-7z" stroke="#fff" stroke-width="1.8"/></svg></div><h3>Kids Parties</h3><p>Playful, safe designs for birthdays and family events.</p></div>
+        <div class="fp-card"><div class="icon-badge" style="background:linear-gradient(135deg,var(--fp-teal),var(--fp-purple));"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 20V10l8-6 8 6v10" stroke="#fff" stroke-width="1.8"/></svg></div><h3>Festivals &amp; Events</h3><p>Reliable, high-volume coverage for markets and festivals.</p></div>
+        <div class="fp-card"><div class="icon-badge" style="background:linear-gradient(135deg,var(--fp-purple),var(--fp-pink));"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="#fff" stroke-width="1.8"/></svg></div><h3>Themed Creative Designs</h3><p>Custom concepts matched to your event's theme.</p></div>
+      </div>
+      <span class="quote-note pl">💬 Contact for a personalised quote</span>
+    </div>
+  </div>
+</section>
+
+<div class="seam-divider p-to-h">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><path class="seam-line seam-thread" d="M0 32 C 200 8, 300 56, 500 30 S 800 8, 1000 34 S 1150 20 1200 32"/></svg>
+</div>
+
+<section class="block theme-henna">
+  <svg class="orn tl" width="200" height="200" viewBox="0 0 200 200"><circle cx="0" cy="0" r="80" fill="none" stroke="#e8cd8a" stroke-width="1"/></svg>
+  <div class="wrap">
+    <div id="services-henna" style="scroll-margin-top:90px;">
+      <h3 style="font-size:1.6rem;">🌙 Henna Services</h3>
+      <div class="hn-grid reveal" style="margin-top:22px;">
+        <div class="hn-card"><div class="rule"></div><h3>Bridal Henna</h3><p>Full bridal mehndi tailored to your day and dress.</p></div>
+        <div class="hn-card"><div class="rule"></div><h3>Eid &amp; Cultural Events</h3><p>Traditional patterns for Eid and cultural celebrations.</p></div>
+        <div class="hn-card"><div class="rule"></div><h3>Custom Intricate Designs</h3><p>Bespoke, symbolic linework designed with you.</p></div>
+      </div>
+      <span class="quote-note hn">💬 Contact for a personalised quote</span>
+    </div>
+  </div>
+</section>
+
+<section class="block theme-neutral">
+  <div class="wrap">
+    <div id="services-events" style="scroll-margin-top:90px;">
+      <span class="eyebrow" style="color:var(--hn-gold);">Event Bookings</span>
+      <h3 class="hn-font" style="font-size:1.6rem;font-weight:400;">Booking types</h3>
+      <div class="ev-grid reveal" style="margin-top:22px;">
+        <div class="ev-card"><h3>Private Events</h3><p>Home celebrations and private parties of any scale.</p></div>
+        <div class="ev-card"><h3>Group Bookings</h3><p>Multiple artists coordinated for larger gatherings.</p></div>
+        <div class="ev-card"><h3>Corporate / Vendor Events</h3><p>Brand activations, staff days and vendor market stalls.</p></div>
+      </div>
+      <span class="quote-note nt">💬 Contact for a personalised quote</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY — KIDS THEMES ============ -->
+<section class="block theme-playful" id="gallery">
+  <div class="magic-field" aria-hidden="true">
+    <span class="pixie-dot" style="top:8%;left:10%;width:3px;height:3px;animation-duration:2.4s;"></span>
+    <span class="pixie-dot" style="top:14%;left:78%;width:4px;height:4px;animation-duration:3.1s;animation-delay:.5s;"></span>
+    <span class="pixie-dot" style="top:26%;left:26%;width:3px;height:3px;animation-duration:2.8s;animation-delay:1.1s;"></span>
+    <span class="pixie-dot" style="top:20%;left:60%;width:2px;height:2px;animation-duration:2.2s;animation-delay:.3s;"></span>
+    <span class="pixie-dot" style="top:34%;left:90%;width:3px;height:3px;animation-duration:3.4s;animation-delay:1.6s;"></span>
+    <span class="pixie-dot" style="top:6%;left:45%;width:2px;height:2px;animation-duration:2.6s;animation-delay:.9s;"></span>
+    <span class="pixie-dot" style="top:40%;left:6%;width:2px;height:2px;animation-duration:3s;animation-delay:1.4s;"></span>
+
+    <span class="firework" style="top:12%;left:18%;width:130px;height:130px;background:radial-gradient(circle, rgba(255,224,138,.55), transparent 70%);animation-duration:6.5s;"></span>
+    <span class="firework" style="top:8%;right:14%;width:110px;height:110px;background:radial-gradient(circle, rgba(255,158,203,.55), transparent 70%);animation-duration:7.5s;animation-delay:2s;"></span>
+    <span class="firework" style="top:30%;left:50%;width:95px;height:95px;background:radial-gradient(circle, rgba(185,138,255,.5), transparent 70%);animation-duration:8.5s;animation-delay:4.2s;"></span>
+    <span class="firework" style="bottom:14%;right:22%;width:80px;height:80px;background:radial-gradient(circle, rgba(138,217,255,.5), transparent 70%);animation-duration:9s;animation-delay:1.4s;"></span>
+
+    <svg class="rainbow-arc" style="position:absolute;top:-8%;left:50%;transform:translateX(-50%);" width="480" height="220" viewBox="0 0 480 220" fill="none">
+      <path d="M20 220a220 220 0 01440 0" stroke="#ff9ecb" stroke-width="8" opacity=".55"/>
+      <path d="M50 220a190 190 0 01380 0" stroke="#ffe08a" stroke-width="8" opacity=".55"/>
+      <path d="M80 220a160 160 0 01320 0" stroke="#b98aff" stroke-width="8" opacity=".55"/>
+      <path d="M110 220a130 130 0 01260 0" stroke="#8ad9ff" stroke-width="8" opacity=".55"/>
+    </svg>
+
+    <svg class="castle-glow" style="position:absolute;bottom:-2%;left:50%;transform:translateX(-50%);" width="360" height="130" viewBox="0 0 360 130" fill="#fff" opacity=".24">
+      <rect x="10" y="70" width="340" height="60"/>
+      <rect x="40" y="40" width="30" height="90"/><polygon points="40,40 55,15 70,40"/>
+      <rect x="100" y="30" width="34" height="100"/><polygon points="100,30 117,2 134,30"/>
+      <rect x="160" y="50" width="40" height="80"/><polygon points="160,50 180,20 200,50"/>
+      <rect x="230" y="30" width="34" height="100"/><polygon points="230,30 247,2 264,30"/>
+      <rect x="290" y="40" width="30" height="90"/><polygon points="290,40 305,15 320,40"/>
+    </svg>
+
+    <svg class="dust-trail" style="position:absolute;top:26%;right:8%;" width="90" height="60" viewBox="0 0 90 60">
+      <path d="M4 50 C 30 10, 60 40, 86 6" stroke="rgba(255,255,255,.4)" stroke-width="1.4" fill="none" stroke-dasharray="2 6"/>
+      <circle cx="86" cy="6" r="3" fill="#ffe08a"/>
+      <circle cx="60" cy="30" r="2" fill="#fff"/>
+      <circle cx="30" cy="20" r="1.6" fill="#ff9ecb"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Gallery</span>
+      <h2 class="fp-font magic-font" style="font-size:clamp(2rem,4vw,3rem);">Kids Themes</h2>
+      <p style="color:#fff;max-width:56ch;margin:0 auto;text-shadow:0 2px 6px rgba(0,0,0,.55);">Our most-loved kids' face painting themes, organised for you to browse. Photos are added regularly — check back soon.</p>
+    </div>
+
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🦄 Unicorn</h3></div>
+      <div class="ph-grid" data-gallery="unicorn"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🦋 Butterfly</h3></div>
+      <div class="ph-grid" data-gallery="butterfly"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🌸 Flower</h3></div>
+      <div class="ph-grid" data-gallery="flower"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🐱 Hello Kitty</h3></div>
+      <div class="ph-grid" data-gallery="hellokitty"></div>
+    </div>
+
+    <div class="gallery-more">
+      <div class="section-head center" style="margin-bottom:24px;">
+        <span class="eyebrow">More Galleries</span>
+        <h2 class="fp-font magic-font" style="font-size:clamp(1.5rem,2.8vw,2.1rem);">Browse by occasion</h2>
+      </div>
+      <div class="hero-ctas" style="justify-content:center;">
+        <a href="#superheroes" class="btn btn-outline-ink">🦸 Superheroes</a>
+        <a href="#halloween" class="btn btn-outline-ink">🎃 Halloween</a>
+        <a href="#christmas" class="btn btn-outline-ink">🎄 Christmas</a>
+        <a href="#henna-designs" class="btn btn-gold">✦ Henna Designs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY — SUPERHEROES ============ -->
+<section class="block theme-playful" id="superheroes">
+  <div class="impact-field" aria-hidden="true">
+    <span class="impact-stripe" style="left:-15%;width:60px;animation-duration:9s;"></span>
+    <span class="impact-stripe" style="left:30%;width:44px;animation-duration:13s;animation-delay:3s;"></span>
+    <span class="impact-stripe" style="left:60%;width:90px;animation-duration:16s;animation-delay:6s;"></span>
+
+    <svg class="comic-badge" style="position:absolute;top:6%;right:5%;" width="86" height="86" viewBox="0 0 100 100"><polygon points="50,3 61,35 95,35 68,57 78,91 50,70 22,91 32,57 5,35 39,35" fill="#ffd400" stroke="#0a0a0a" stroke-width="2"/></svg>
+
+    <svg class="shield-mark" style="position:absolute;bottom:-8%;left:-6%;opacity:.14;" width="280" height="280" viewBox="0 0 100 100"><path d="M50 4l38 14v28c0 24-16 42-38 50C28 88 12 70 12 46V18z" fill="#fff" fill-opacity=".08" stroke="#fff" stroke-width="2.5"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Gallery · Superheroes</span>
+      <h2 class="fp-font magic-font" style="font-size:clamp(2rem,4vw,3rem);">Superhero Face Painting</h2>
+      <p style="color:#fff;max-width:56ch;margin:0 auto;text-shadow:0 2px 6px rgba(0,0,0,.65);">Bold, action-packed hero designs for birthday parties, festivals and events. Photos are added regularly — check back soon.</p>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🕷️ Spiderman</h3></div>
+      <div class="ph-grid" data-gallery="spiderman"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🦇 Batman</h3></div>
+      <div class="ph-grid" data-gallery="batman"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🦸‍♂️ Superman</h3></div>
+      <div class="ph-grid" data-gallery="superman"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🛡️ Avengers</h3></div>
+      <div class="ph-grid" data-gallery="avengers"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>✨ Mixed</h3></div>
+      <div class="ph-grid" data-gallery="superheroesMixed"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY — HALLOWEEN ============ -->
+<section class="block theme-playful" id="halloween">
+  <div class="spooky-field" aria-hidden="true">
+    <svg class="spooky-item bat" style="top:12%;left:5%;" width="34" height="20" viewBox="0 0 64 40"><path fill="#1c1024" stroke="#ff9d4d" stroke-width="1" d="M32 14c-4-10-14-14-14-14s2 8 8 12c-8-2-16 2-16 2s6 4 14 4c-6 4-10 10-10 10s8-2 14-8c1 3 4 6 4 6s3-3 4-6c6 6 14 8 14 8s-4-6-10-10c8 0 14-4 14-4s-8-4-16-2c6-4 8-12 8-12s-10 4-14 14z"/></svg>
+    <svg class="spooky-item bat b2" style="top:38%;right:8%;" width="26" height="16" viewBox="0 0 64 40"><path fill="#1c1024" stroke="#9a6fe0" stroke-width="1" d="M32 14c-4-10-14-14-14-14s2 8 8 12c-8-2-16 2-16 2s6 4 14 4c-6 4-10 10-10 10s8-2 14-8c1 3 4 6 4 6s3-3 4-6c6 6 14 8 14 8s-4-6-10-10c8 0 14-4 14-4s-8-4-16-2c6-4 8-12 8-12s-10 4-14 14z"/></svg>
+    <svg class="spooky-item bat b3" style="top:6%;right:24%;" width="20" height="12" viewBox="0 0 64 40"><path fill="#1c1024" stroke="#ff9d4d" stroke-width="1" d="M32 14c-4-10-14-14-14-14s2 8 8 12c-8-2-16 2-16 2s6 4 14 4c-6 4-10 10-10 10s8-2 14-8c1 3 4 6 4 6s3-3 4-6c6 6 14 8 14 8s-4-6-10-10c8 0 14-4 14-4s-8-4-16-2c6-4 8-12 8-12s-10 4-14 14z"/></svg>
+
+    <svg class="spooky-item ghost" style="bottom:8%;left:8%;" width="46" height="52" viewBox="0 0 48 56"><path fill="rgba(244,234,215,.85)" d="M24 2C11 2 4 12 4 24v26l6-6 6 6 8-8 8 8 6-6 6 6V24C44 12 37 2 24 2z"/><circle cx="17" cy="24" r="3" fill="#1c1024"/><circle cx="31" cy="24" r="3" fill="#1c1024"/></svg>
+    <svg class="spooky-item ghost" style="top:18%;left:44%;animation-delay:1.5s;" width="30" height="34" viewBox="0 0 48 56"><path fill="rgba(244,234,215,.6)" d="M24 2C11 2 4 12 4 24v26l6-6 6 6 8-8 8 8 6-6 6 6V24C44 12 37 2 24 2z"/><circle cx="17" cy="24" r="3" fill="#1c1024"/><circle cx="31" cy="24" r="3" fill="#1c1024"/></svg>
+
+    <svg class="spooky-item jack-glow" style="bottom:14%;right:10%;" width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#ff9d4d" opacity=".5"/><circle cx="12" cy="12" r="4" fill="#ffe3b0"/></svg>
+    <svg class="spooky-item jack-glow" style="top:12%;left:20%;animation-delay:1s;" width="14" height="14" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#9a6fe0" opacity=".5"/><circle cx="12" cy="12" r="4" fill="#e8cd8a"/></svg>
+
+    <svg class="spooky-item spider" style="top:0;left:72%;" width="30" height="90" viewBox="0 0 30 90"><line x1="15" y1="0" x2="15" y2="60" stroke="rgba(244,234,215,.4)" stroke-width="1"/><circle cx="15" cy="66" r="6" fill="#1c1024" stroke="#ff9d4d" stroke-width="1"/><circle cx="15" cy="73" r="8" fill="#1c1024" stroke="#ff9d4d" stroke-width="1"/><path d="M8 68l-8-4M8 71l-9 1M8 75l-8 6M22 68l8-4M22 71l9 1M22 75l8 6" stroke="#ff9d4d" stroke-width="1"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Gallery · Halloween</span>
+      <h2 class="fp-font magic-font" style="font-size:clamp(2rem,4vw,3rem);">Halloween Face Painting</h2>
+      <p style="color:rgba(244,234,215,.85);max-width:56ch;margin:0 auto;text-shadow:0 2px 6px rgba(0,0,0,.55);">Spooky, fun and family-friendly Halloween designs for parties and trick-or-treat season. Photos are added regularly — check back soon.</p>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🧙 Witch</h3></div>
+      <div class="ph-grid" data-gallery="witch"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>💀 Skull</h3></div>
+      <div class="ph-grid" data-gallery="skull"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🎃 Pumpkin</h3></div>
+      <div class="ph-grid" data-gallery="pumpkin"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🧟 Zombie</h3></div>
+      <div class="ph-grid" data-gallery="zombie"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>✨ Mixed</h3></div>
+      <div class="ph-grid" data-gallery="halloweenMixed"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY — CHRISTMAS ============ -->
+<section class="block theme-playful" id="christmas">
+  <div class="winter-field" aria-hidden="true">
+    <svg class="fairy-lights" viewBox="0 0 1200 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="wire" d="M0 6 C 25 42, 75 42, 100 6 C 125 42, 175 42, 200 6 C 225 42, 275 42, 300 6 C 325 42, 375 42, 400 6 C 425 42, 475 42, 500 6 C 525 42, 575 42, 600 6 C 625 42, 675 42, 700 6 C 725 42, 775 42, 800 6 C 825 42, 875 42, 900 6 C 925 42, 975 42, 1000 6 C 1025 42, 1075 42, 1100 6 C 1125 42, 1175 42, 1200 6"/>
+      <circle class="bulb" cx="50" cy="34" r="5" fill="currentColor" style="color:#ff6b5b;animation-delay:0.0s;"/>
+      <circle class="bulb" cx="150" cy="34" r="5" fill="currentColor" style="color:#ffd76b;animation-delay:0.28s;"/>
+      <circle class="bulb" cx="250" cy="34" r="5" fill="currentColor" style="color:#33b6a8;animation-delay:0.56s;"/>
+      <circle class="bulb" cx="350" cy="34" r="5" fill="currentColor" style="color:#9a6fe0;animation-delay:0.84s;"/>
+      <circle class="bulb" cx="450" cy="34" r="5" fill="currentColor" style="color:#fff6e6;animation-delay:1.12s;"/>
+      <circle class="bulb" cx="550" cy="34" r="5" fill="currentColor" style="color:#ff6b5b;animation-delay:0.13s;"/>
+      <circle class="bulb" cx="650" cy="34" r="5" fill="currentColor" style="color:#ffd76b;animation-delay:0.41s;"/>
+      <circle class="bulb" cx="750" cy="34" r="5" fill="currentColor" style="color:#33b6a8;animation-delay:0.69s;"/>
+      <circle class="bulb" cx="850" cy="34" r="5" fill="currentColor" style="color:#9a6fe0;animation-delay:0.97s;"/>
+      <circle class="bulb" cx="950" cy="34" r="5" fill="currentColor" style="color:#fff6e6;animation-delay:1.25s;"/>
+      <circle class="bulb" cx="1050" cy="34" r="5" fill="currentColor" style="color:#ff6b5b;animation-delay:0.26s;"/>
+      <circle class="bulb" cx="1150" cy="34" r="5" fill="currentColor" style="color:#ffd76b;animation-delay:0.54s;"/>
+    </svg>
+    <div class="snowflake" style="left:4%;width:5px;height:5px;animation-duration:11s;animation-delay:0s;"></div>
+    <div class="snowflake" style="left:12%;width:3px;height:3px;animation-duration:9s;animation-delay:1.2s;"></div>
+    <div class="snowflake" style="left:20%;width:6px;height:6px;animation-duration:14s;animation-delay:2.4s;"></div>
+    <div class="snowflake" style="left:29%;width:4px;height:4px;animation-duration:10s;animation-delay:.6s;"></div>
+    <div class="snowflake" style="left:37%;width:3px;height:3px;animation-duration:12.5s;animation-delay:3.1s;"></div>
+    <div class="snowflake" style="left:46%;width:5px;height:5px;animation-duration:9.5s;animation-delay:1.8s;"></div>
+    <div class="snowflake" style="left:54%;width:4px;height:4px;animation-duration:13s;animation-delay:4.2s;"></div>
+    <div class="snowflake" style="left:62%;width:6px;height:6px;animation-duration:11.5s;animation-delay:.3s;"></div>
+    <div class="snowflake" style="left:70%;width:3px;height:3px;animation-duration:10.5s;animation-delay:2.9s;"></div>
+    <div class="snowflake" style="left:78%;width:5px;height:5px;animation-duration:15s;animation-delay:1s;"></div>
+    <div class="snowflake" style="left:86%;width:4px;height:4px;animation-duration:9.8s;animation-delay:3.6s;"></div>
+    <div class="snowflake" style="left:93%;width:3px;height:3px;animation-duration:12s;animation-delay:.9s;"></div>
+    <div class="snowflake" style="left:8%;width:4px;height:4px;animation-duration:13.5s;animation-delay:5s;"></div>
+    <div class="snowflake" style="left:66%;width:3px;height:3px;animation-duration:11s;animation-delay:6.1s;"></div>
+
+    <div class="xmas-sparkle" style="top:14%;left:16%;animation-delay:.4s;"></div>
+    <div class="xmas-sparkle" style="top:24%;left:82%;animation-delay:1.6s;"></div>
+    <div class="xmas-sparkle" style="top:58%;left:8%;animation-delay:2.4s;"></div>
+    <div class="xmas-sparkle" style="top:66%;left:90%;animation-delay:.9s;"></div>
+    <div class="xmas-sparkle" style="top:10%;left:52%;animation-delay:3.2s;"></div>
+    <div class="xmas-sparkle" style="top:44%;left:38%;animation-delay:1.9s;"></div>
+
+    <div class="sleigh-wrap">
+      <svg viewBox="-30 -20 270 110" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <g id="xmasDeer">
+            <path d="M4 12 L-4 8" stroke="#3a2013" stroke-width="2" stroke-linecap="round"/>
+            <ellipse cx="18" cy="16" rx="14" ry="8" fill="#3a2013"/>
+            <path d="M30 12 Q40 4 44 -2" stroke="#3a2013" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <circle cx="46" cy="-4" r="4.2" fill="#3a2013"/>
+            <path d="M46 -8 L42 -16 M46 -8 L48 -17 M49 -9 L54 -15 M49 -9 L52 -17" stroke="#3a2013" stroke-width="1.4" stroke-linecap="round"/>
+            <circle cx="49" cy="-3" r="1.6" fill="#ff6b5b"/>
+            <path d="M6 20 L-2 30 M12 22 L8 33 M24 22 L28 33 M30 20 L36 29" stroke="#3a2013" stroke-width="2.4" stroke-linecap="round"/>
+          </g>
+        </defs>
+
+        <circle cx="-14" cy="74" r="1" fill="#ffe9c2" opacity=".35"/>
+        <circle cx="-6" cy="70" r="1.3" fill="#ffe9c2" opacity=".5"/>
+        <circle cx="4" cy="66" r="1.7" fill="#ffe9c2" opacity=".7"/>
+
+        <path d="M20 60 Q18 74 34 76 L78 76 Q92 76 90 62 L86 46 Q84 40 76 40 L34 40 Q22 40 20 60 Z" fill="#c0392b" stroke="#ffd76b" stroke-width="1.5"/>
+        <path d="M18 62 Q6 66 4 76" stroke="#ffd76b" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+
+        <ellipse cx="55" cy="48" rx="12" ry="10" fill="#c0392b"/>
+        <circle cx="55" cy="34" r="7" fill="#f4c9a0"/>
+        <path d="M48 32 Q55 14 64 30 Q58 24 50 30 Z" fill="#c0392b"/>
+        <circle cx="64" cy="29" r="2.6" fill="#fff"/>
+
+        <path d="M90 50 L120 40" stroke="#3a2013" stroke-width="1.4"/>
+        <path d="M120 40 L160 26" stroke="#3a2013" stroke-width="1.4"/>
+        <path d="M160 26 L200 12" stroke="#3a2013" stroke-width="1.4"/>
+
+        <g transform="translate(110,34)"><use href="#xmasDeer"/></g>
+        <g transform="translate(150,20)"><use href="#xmasDeer"/></g>
+        <g transform="translate(190,6)"><use href="#xmasDeer"/></g>
+      </svg>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Gallery · Christmas</span>
+      <h2 class="fp-font magic-font" style="font-size:clamp(2rem,4vw,3rem);">Christmas Face Painting</h2>
+      <p style="color:rgba(244,234,215,.82);max-width:56ch;margin:0 auto;">Festive, joyful designs to bring Christmas cheer to any party or event. Photos are added regularly — check back soon.</p>
+    </div>
+    <div class="theme-section reveal-scale">
+      <div class="theme-section-head"><h3>🎅 Santa</h3></div>
+      <div class="ph-grid" data-gallery="santa"></div>
+    </div>
+    <div class="theme-section reveal-scale">
+      <div class="theme-section-head"><h3>🦌 Reindeer</h3></div>
+      <div class="ph-grid" data-gallery="reindeer"></div>
+    </div>
+    <div class="theme-section reveal-scale">
+      <div class="theme-section-head"><h3>⛄ Snowman</h3></div>
+      <div class="ph-grid" data-gallery="snowman"></div>
+    </div>
+    <div class="theme-section reveal-scale">
+      <div class="theme-section-head"><h3>🎄 Festive Designs</h3></div>
+      <div class="ph-grid" data-gallery="festive"></div>
+    </div>
+  </div>
+</section>
+
+<div class="seam-divider p-to-h">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><path class="seam-line seam-thread" d="M0 32 C 200 8, 300 56, 500 30 S 800 8, 1000 34 S 1150 20 1200 32"/></svg>
+</div>
+
+<!-- ============ GALLERY — HENNA DESIGNS ============ -->
+<section class="block theme-henna" id="henna-designs">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow gold">Gallery · Henna Designs</span>
+      <h2 class="hn-font" style="font-size:clamp(2rem,4vw,3rem);">Henna Designs</h2>
+      <p style="color:rgba(244,234,215,.78);max-width:56ch;margin:0 auto;">Elegant, hand-crafted henna artistry for weddings and cultural celebrations. Photos are added regularly — check back soon.</p>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>💍 Bridal</h3></div>
+      <div class="ph-grid" data-gallery="bridal"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🌙 Arabic</h3></div>
+      <div class="ph-grid" data-gallery="arabic"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>🪷 Mughal</h3></div>
+      <div class="ph-grid" data-gallery="mughal"></div>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>◈ Minimal</h3></div>
+      <div class="ph-grid" data-gallery="minimal"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="block theme-henna" id="faq">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head center reveal">
+      <span class="eyebrow gold">FAQ</span>
+      <h2 style="font-size:clamp(1.7rem,3.2vw,2.4rem);">Good to know</h2>
+    </div>
+    <div id="faq-list" class="reveal"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="block theme-neutral" id="contact">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow" style="color:var(--hn-gold);">Contact &amp; Booking</span>
+      <h2 class="hn-font" style="font-size:clamp(1.8rem,3.6vw,2.6rem);">Enquire now to check availability</h2>
+      <p style="color:var(--ink-soft);">Receive a personalised quote for your event — no pricing lists, just tailored artistry for exactly what you need.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="form-card">
+        <form id="booking-form" onsubmit="submitForm(event)">
+          <div class="field-row">
+            <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" required placeholder="Your full name"></div>
+            <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" required placeholder="07..."></div>
+          </div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" required placeholder="you@email.com"></div>
+          <div class="field">
+            <label for="f-type">Event Type</label>
+            <select id="f-type" required>
+              <option value="">Select event type</option>
+              <option>Kids Party</option>
+              <option>Festival / Vendor Market</option>
+              <option>Bridal Henna</option>
+              <option>Eid / Cultural Event</option>
+              <option>Corporate Event</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" rows="4" required placeholder="Tell us about your event date, location and what you have in mind..."></textarea></div>
+          <button type="submit" class="btn btn-playful btn-block">Send Enquiry via WhatsApp</button>
+          <div class="success-box" id="success-box">✓ Thanks! Your enquiry is ready in WhatsApp — just hit send there to reach us on 07498 415011.</div>
+        </form>
+      </div>
+      <div class="info-card">
+        <h3>Get in touch</h3>
+        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2z" stroke="currentColor" stroke-width="1.5"/></svg><div><b>WhatsApp</b><span><a href="https://wa.me/447498415011?text=Hi%20Luxe%2C%20I%27d%20like%20to%20enquire%20about%20booking" target="_blank" rel="noopener">Message us on WhatsApp</a></span></div></div>
+        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M3 6l9 7 9-7M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5"/></svg><div><b>Email</b><span><a href="mailto:luxeartstudio1@gmail.com">luxeartstudio1@gmail.com</a></span></div></div>
+        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.4" stroke="currentColor" stroke-width="1.4"/></svg><div><b>Location</b><span>Serving all areas of London</span></div></div>
+        <div class="info-row"><svg class="ico" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><div><b>Instagram</b><span><a href="https://instagram.com/luxeartstudio1" target="_blank" rel="noopener">@luxeartstudio1</a></span></div></div>
+        <p class="hn-script" style="margin-top:24px;font-size:1.05rem;color:rgba(244,234,215,.72);">Enquire now to check availability and receive a personalised quote.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="margin-bottom:14px;"><b style="color:var(--fp-yellow);">Luxe</b><i style="color:var(--hn-gold-2);">&nbsp;Studio</i></div>
+        <p style="color:rgba(255,248,238,.65);max-width:32ch;">Luxe face painting &amp; henna artistry for events across London.</p>
+      </div>
+      <div><h5>Explore</h5><ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Kids Themes</a></li>
+      </ul></div>
+      <div><h5>Galleries</h5><ul>
+        <li><a href="#superheroes">Superheroes</a></li>
+        <li><a href="#halloween">Halloween</a></li>
+        <li><a href="#christmas">Christmas</a></li>
+        <li><a href="#henna-designs">Henna Designs</a></li>
+      </ul></div>
+      <div><h5>Services</h5><ul>
+        <li><a href="#services-facepaint">Face Painting London</a></li>
+        <li><a href="#services-henna">Bridal Henna London</a></li>
+        <li><a href="#services-events">Event Bookings</a></li>
+      </ul></div>
+      <div><h5>Contact</h5><ul>
+        <li><a href="mailto:luxeartstudio1@gmail.com">luxeartstudio1@gmail.com</a></li>
+        <li>Serving all areas of London</li>
+        <li><a href="#contact">Enquire Now</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Luxe Face Painting &amp; Henna, London.</span>
+      <span>Face Painting London · Henna Artist London · Kids Face Painting London · Bridal Henna London</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING QUICK CONTACT ============ -->
+<div class="fab-stack">
+  <a class="fab fab-ig" href="https://instagram.com/luxeartstudio1" target="_blank" rel="noopener" aria-label="Open Instagram @luxeartstudio1">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="#fff" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1.1" fill="#fff"/></svg>
+  </a>
+  <a class="fab fab-wa" href="https://wa.me/447498415011?text=Hi%20Luxe%2C%20I%27d%20like%20to%20enquire%20about%20booking" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/><path d="M9.1 7.4c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.4.2.4.6 1.6.7 1.7.1.1.1.3 0 .4-.1.2-.2.3-.3.5-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.7.8.2.1.4.2.4.3 0 .2 0 1-.4 1.9-.4.9-2 1.6-2.7 1.6-.7 0-1.6-.1-3.5-1.1-2.9-1.4-4.6-4.4-4.7-4.6-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1z"/></svg>
+  </a>
+</div>
+
+<script src="gallery-data.js"></script>
+<script>
+  /* Mobile nav */
+  var burger=document.getElementById('burger'), nav=document.getElementById('mainnav');
+  burger.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    burger.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open);
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');burger.classList.remove('open');});});
+
+  /* Scroll reveal (elegant fade-ins) */
+  var revealEls=document.querySelectorAll('.reveal,.reveal-scale');
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.18});
+  revealEls.forEach(function(el){io.observe(el);});
+
+var IMAGES={};
+
+  /* Gallery grids — reads real photos from gallery-data.js (window.GALLERY_DATA).
+     Each [data-gallery="key"] grid renders its real photos first, then fills
+     any remaining slots (up to targetPerCategory) with "coming soon" tiles.
+     To add real photos, edit gallery-data.js only — never this file. */
+  var phIcon='<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><circle cx="9" cy="10.3" r="1.6" stroke="currentColor" stroke-width="1.2"/><path d="M21 16.5l-5.3-4.8-3.8 3.6L8.2 12 3 16.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var galleryData = window.GALLERY_DATA || {targetPerCategory:4,categories:{}};
+  document.querySelectorAll('[data-gallery]').forEach(function(grid){
+    var key = grid.getAttribute('data-gallery');
+    var photos = galleryData.categories[key] || [];
+    var target = galleryData.targetPerCategory || 4;
+    var html='';
+    photos.forEach(function(p){
+      html+='<div class="ph-box has-photo"><img src="'+p.src+'" alt="'+p.alt+'" loading="lazy" decoding="async"></div>';
+    });
+    for(var i=photos.length;i<target;i++){
+      html+='<div class="ph-box">'+phIcon+'<span>Photo coming soon</span></div>';
+    }
+    grid.innerHTML=html;
+  });
+
+  /* FAQ */
+  var faqData=[
+    {q:'How far in advance should I book?',a:'For weddings and summer festival dates, we recommend enquiring 6–8 weeks ahead. Kids parties and smaller bookings can often be confirmed with 1–2 weeks notice, subject to availability.'},
+    {q:'Do you travel across London?',a:'Yes — Luxe covers all London boroughs, with events further afield available on request. Simply share your location when you enquire.'},
+    {q:'Is the face paint safe for sensitive skin?',a:'We use professional-grade, skin-safe, cosmetic face paint. Let us know about any known allergies in advance and we can carry out a patch test before the event.'},
+    {q:'How long does henna last?',a:'A well cared-for henna stain typically lasts one to three weeks, developing to its deepest colour over the first 24–48 hours. Bridal henna tends to stain darkest and longest.'},
+    {q:'Can you cater large festivals or vendor markets?',a:'Yes — we regularly work full festival days and weekend markets, and can bring additional artists for high-footfall events to keep queues moving.'},
+    {q:'How do I get a price for my event?',a:'Every booking is quoted individually based on your event type, size and location. Simply send an enquiry through the contact form and we\'ll reply with a personalised quote.'}
+  ];
+  document.getElementById('faq-list').innerHTML = faqData.map(function(f,i){
+    return '<div class="faq-item" id="faq-'+i+'"><button class="faq-q" onclick="toggleFaq('+i+')">'+f.q+'<span class="plus">+</span></button><div class="faq-a" id="faq-a-'+i+'"><p>'+f.a+'</p></div></div>';
+  }).join('');
+  function toggleFaq(i){
+    var item=document.getElementById('faq-'+i);
+    var isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(el,idx){
+      el.classList.remove('open');
+      document.getElementById('faq-a-'+idx).style.maxHeight=null;
+    });
+    if(!isOpen){ item.classList.add('open'); document.getElementById('faq-a-'+i).style.maxHeight=document.getElementById('faq-a-'+i).scrollHeight+'px'; }
+  }
+
+  /* Booking form — sends enquiry to WhatsApp */
+  function submitForm(e){
+    e.preventDefault();
+    var name=document.getElementById('f-name').value;
+    var phone=document.getElementById('f-phone').value;
+    var email=document.getElementById('f-email').value;
+    var type=document.getElementById('f-type').value;
+    var msg=document.getElementById('f-msg').value;
+    var text = "Hi Luxe, I'd like to enquire about booking.\n"
+      + "Name: " + name + "\n"
+      + "Phone: " + phone + "\n"
+      + "Email: " + email + "\n"
+      + "Event type: " + type + "\n"
+      + "Details: " + msg;
+    var url = "https://wa.me/447498415011?text=" + encodeURIComponent(text);
+    window.open(url, "_blank");
+    var box=document.getElementById('success-box');
+    box.classList.add('show');
+    document.getElementById('booking-form').reset();
+    box.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+</script>
+</body>
+</html>
