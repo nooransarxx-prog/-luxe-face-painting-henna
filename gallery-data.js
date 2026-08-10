@@ -42,7 +42,12 @@ window.GALLERY_DATA = {
     ],
 
     /* ---- Superheroes ---- */
-    spiderman: [],
+    spiderman: [
+      { src: "images/spiderman-1.jpg", alt: "Red and black Spiderman mask face paint with spider on nose" },
+      { src: "images/spiderman-2.jpg", alt: "Red and black Spiderman web face paint on side profile" },
+      { src: "images/spiderman-3.jpg", alt: "Black spider and web face paint design on cheek and temple" },
+      { src: "images/spiderman-4.jpg", alt: "Red Spiderman web face paint on forehead and temple" }
+    ],
     batman: [],
     superman: [],
     avengers: [],
