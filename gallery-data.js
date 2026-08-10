@@ -22,9 +22,24 @@ window.GALLERY_DATA = {
       { src: "images/unicorn-3.jpg", alt: "Unicorn face paint with striped horn and pink flower gem" },
       { src: "images/unicorn-4.jpg", alt: "Purple and gold unicorn face paint design on cheek and temple" }
     ],
-    butterfly: [],
-    flower: [],
-    hellokitty: [],
+    butterfly: [
+      { src: "images/butterfly-1.jpg", alt: "Pink and purple butterfly face paint on child with heart details" },
+      { src: "images/butterfly-2.jpg", alt: "Rainbow butterfly face paint with jewel gem detail between the eyes" },
+      { src: "images/butterfly-3.jpg", alt: "Close-up rainbow butterfly face paint with pearl and crystal gems" },
+      { src: "images/butterfly-4.jpg", alt: "Gold butterfly face paint with floral crown design on forehead" }
+    ],
+    flower: [
+      { src: "images/flower-1.jpg", alt: "Blue gem and feather flower crown face paint design on forehead" },
+      { src: "images/flower-2.jpg", alt: "Gold and blue floral vine face paint with jewel detail on forehead" },
+      { src: "images/flower-3.jpg", alt: "Colourful floral face paint design along temple and cheek" },
+      { src: "images/flower-4.jpg", alt: "Delicate purple and white flower face paint along temple" }
+    ],
+    hellokitty: [
+      { src: "images/hellokitty-1.jpg", alt: "Hello Kitty face paint with red bow and whiskers covering full face" },
+      { src: "images/hellokitty-2.jpg", alt: "Hello Kitty face paint with pink bow, hearts and stars on temple" },
+      { src: "images/hellokitty-3.jpg", alt: "Sparkly Hello Kitty face paint with glitter hearts on temple" },
+      { src: "images/hellokitty-4.jpg", alt: "Hello Kitty face paint with red bow and whiskers on child" }
+    ],
 
     /* ---- Superheroes ---- */
     spiderman: [],
