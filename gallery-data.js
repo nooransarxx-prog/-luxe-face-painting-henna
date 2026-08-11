@@ -48,10 +48,30 @@ window.GALLERY_DATA = {
       { src: "images/spiderman-3.jpg", alt: "Black spider and web face paint design on cheek and temple" },
       { src: "images/spiderman-4.jpg", alt: "Red Spiderman web face paint on forehead and temple" }
     ],
-    batman: [],
-    superman: [],
-    avengers: [],
-    superheroesMixed: [],
+    batman: [
+      { src: "images/batman-1.jpg", alt: "Batman face paint mask with orange and red cowl detail on forehead" },
+      { src: "images/batman-2.jpg", alt: "Batman face paint with spotted orange cowl and grey bat emblem on forehead" },
+      { src: "images/batman-3.jpg", alt: "Black and yellow Batman mask face paint on child at face painting booth" },
+      { src: "images/batman-4.jpg", alt: "Batman bat symbol face paint in black and gold on cheek" }
+    ],
+    superman: [
+      { src: "images/superman-1.jpg", alt: "Superman face paint mask in red and blue with gold shield emblem" },
+      { src: "images/superman-2.jpg", alt: "Superman shield face paint design in blue and red on forehead" },
+      { src: "images/superman-3.jpg", alt: "Superman logo face and body paint in red, yellow and blue" },
+      { src: "images/superman-4.jpg", alt: "Superman shield face paint design in red and yellow on cheek" }
+    ],
+    avengers: [
+      { src: "images/avengers-1.jpg", alt: "Captain America face paint mask in blue with white star emblem" },
+      { src: "images/avengers-2.jpg", alt: "Red superhero mask face paint with lightning bolt emblem on forehead" },
+      { src: "images/avengers-3.jpg", alt: "Hulk face paint in green with black spiky brow design" },
+      { src: "images/avengers-4.jpg", alt: "Iron Man face paint mask in red and gold on forehead and cheek" }
+    ],
+    superheroesMixed: [
+      { src: "images/superheroesMixed-1.jpg", alt: "Captain America shield face paint with white wings design across brow" },
+      { src: "images/superheroesMixed-2.jpg", alt: "Green gadget emblem face paint design on cheek" },
+      { src: "images/superheroesMixed-3.jpg", alt: "Black tribal superhero mask face paint design across brow and cheeks" },
+      { src: "images/superheroesMixed-4.jpg", alt: "Skull and crossbones with straw hat face paint design on cheek" }
+    ],
 
     /* ---- Halloween ---- */
     witch: [],
