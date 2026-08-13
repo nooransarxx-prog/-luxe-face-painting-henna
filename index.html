@@ -870,6 +870,70 @@ footer ul li a:hover{color:var(--fp-yellow);}
   #christmas .section-head h2,.snowflake,.xmas-sparkle,.sleigh-wrap{animation:none;}
   .snowflake,.xmas-sparkle{display:none;}
 }
+
+/* ---- Adult Designs — magical garden ---- */
+#adult-designs{
+  background:
+    radial-gradient(ellipse at 18% 15%, rgba(232,205,138,.14), transparent 55%),
+    radial-gradient(ellipse at 82% 30%, rgba(242,166,201,.14), transparent 55%),
+    radial-gradient(ellipse at 30% 85%, rgba(143,217,196,.12), transparent 55%),
+    linear-gradient(160deg,#1b2a2f 0%,#2a1f45 55%,#38214a 100%);
+}
+#adult-designs .eyebrow{color:#f2a6c9;}
+#adult-designs .eyebrow::before{background:#f2a6c9;}
+#adult-designs .section-head h2{text-shadow:0 0 16px rgba(232,205,138,.4),0 0 28px rgba(242,166,201,.28);}
+
+.garden-field{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+
+.garden-glow{position:absolute;border-radius:50%;filter:blur(46px);opacity:.28;animation:gardenGlowPulse 7s ease-in-out infinite;}
+@keyframes gardenGlowPulse{
+  0%,100%{opacity:.2;transform:scale(1);}
+  50%{opacity:.4;transform:scale(1.12);}
+}
+
+.garden-sparkle{
+  position:absolute;width:5px;height:5px;border-radius:50%;
+  opacity:0;animation:gardenSparkleTwinkle 4.8s ease-in-out infinite;
+}
+.garden-sparkle.sm{width:3px;height:3px;}
+@keyframes gardenSparkleTwinkle{
+  0%,100%{opacity:0;transform:scale(.3) rotate(0deg);}
+  50%{opacity:1;transform:scale(1.2) rotate(180deg);}
+}
+
+.butterfly-wrap{position:absolute;left:-8%;z-index:1;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3));}
+.butterfly-wrap.fly-right{animation-name:butterflyDriftRight;animation-timing-function:ease-in-out;animation-iteration-count:infinite;}
+.butterfly-wrap.fly-left{left:auto;right:-8%;animation-name:butterflyDriftLeft;animation-timing-function:ease-in-out;animation-iteration-count:infinite;}
+@keyframes butterflyDriftRight{
+  0%{transform:translate(0,0) rotate(-6deg);opacity:0;}
+  8%{opacity:1;}
+  30%{transform:translate(30vw,-34px) rotate(5deg);}
+  55%{transform:translate(55vw,14px) rotate(-5deg);}
+  80%{transform:translate(80vw,-22px) rotate(4deg);}
+  92%{opacity:1;}
+  100%{transform:translate(112vw,10px) rotate(-4deg);opacity:0;}
+}
+@keyframes butterflyDriftLeft{
+  0%{transform:translate(0,0) rotate(6deg) scaleX(-1);opacity:0;}
+  8%{opacity:1;}
+  30%{transform:translate(-30vw,-30px) rotate(-5deg) scaleX(-1);}
+  55%{transform:translate(-55vw,16px) rotate(5deg) scaleX(-1);}
+  80%{transform:translate(-80vw,-20px) rotate(-4deg) scaleX(-1);}
+  92%{opacity:1;}
+  100%{transform:translate(-112vw,8px) rotate(4deg) scaleX(-1);opacity:0;}
+}
+.butterfly-svg .wing{transform-box:fill-box;transform-origin:center;animation:wingFlap .45s ease-in-out infinite alternate;}
+.butterfly-svg .wing-r{animation-delay:.04s;}
+@keyframes wingFlap{
+  0%{transform:scaleX(1);}
+  100%{transform:scaleX(.4);}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .garden-sparkle,.garden-glow{animation:none;opacity:.4;}
+  .butterfly-wrap{animation:none;opacity:.85;position:static;display:inline-block;margin:4px;}
+  .butterfly-svg .wing{animation:none;}
+}
 </style>
 </head>
 <body>
@@ -888,6 +952,7 @@ footer ul li a:hover{color:var(--fp-yellow);}
       <a class="navlink" href="#superheroes">Superheroes</a>
       <a class="navlink" href="#halloween">Halloween</a>
       <a class="navlink" href="#christmas">Christmas</a>
+      <a class="navlink" href="#adult-designs">Adult Designs</a>
       <a class="navlink" href="#henna-designs">Henna Designs</a>
       <a class="navlink" href="#about">About</a>
       <a class="navlink" href="#services">Services</a>
@@ -1184,6 +1249,70 @@ footer ul li a:hover{color:var(--fp-yellow);}
     <div class="theme-section reveal-scale">
       <div class="theme-section-head"><h3>🎄 Festive Designs</h3></div>
       <div class="ph-grid" data-gallery="festive"></div>
+    </div>
+  </div>
+</section>
+
+<div class="seam-divider p-to-h">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><path class="seam-line seam-thread" d="M0 32 C 200 8, 300 56, 500 30 S 800 8, 1000 34 S 1150 20 1200 32"/></svg>
+</div>
+
+<!-- ============ GALLERY — ADULT DESIGNS ============ -->
+<section class="block theme-henna" id="adult-designs">
+  <div class="garden-field" aria-hidden="true">
+    <div class="garden-glow" style="top:-8%;left:12%;width:260px;height:260px;background:#e8cd8a;animation-delay:0s;"></div>
+    <div class="garden-glow" style="top:40%;left:78%;width:220px;height:220px;background:#f2a6c9;animation-delay:1.6s;"></div>
+    <div class="garden-glow" style="top:70%;left:22%;width:200px;height:200px;background:#8fd9c4;animation-delay:3.1s;"></div>
+
+    <div class="garden-sparkle" style="top:12%;left:8%;background:#e8cd8a;box-shadow:0 0 10px 3px rgba(232,205,138,.6);animation-delay:.2s;"></div>
+    <div class="garden-sparkle sm" style="top:22%;left:88%;background:#f2a6c9;box-shadow:0 0 8px 3px rgba(242,166,201,.55);animation-delay:1.4s;"></div>
+    <div class="garden-sparkle" style="top:64%;left:14%;background:#b79ce0;box-shadow:0 0 10px 3px rgba(183,156,224,.55);animation-delay:2.6s;"></div>
+    <div class="garden-sparkle sm" style="top:76%;left:92%;background:#8fd9c4;box-shadow:0 0 8px 3px rgba(143,217,196,.5);animation-delay:.8s;"></div>
+    <div class="garden-sparkle" style="top:10%;left:52%;background:#e8cd8a;box-shadow:0 0 10px 3px rgba(232,205,138,.6);animation-delay:3.4s;"></div>
+    <div class="garden-sparkle sm" style="top:46%;left:40%;background:#f2a6c9;box-shadow:0 0 8px 3px rgba(242,166,201,.55);animation-delay:1.9s;"></div>
+    <div class="garden-sparkle" style="top:36%;left:70%;background:#b79ce0;box-shadow:0 0 10px 3px rgba(183,156,224,.55);animation-delay:2.2s;"></div>
+    <div class="garden-sparkle sm" style="top:58%;left:60%;background:#8fd9c4;box-shadow:0 0 8px 3px rgba(143,217,196,.5);animation-delay:4.1s;"></div>
+    <div class="garden-sparkle" style="top:84%;left:34%;background:#e8cd8a;box-shadow:0 0 10px 3px rgba(232,205,138,.6);animation-delay:.5s;"></div>
+    <div class="garden-sparkle sm" style="top:6%;left:78%;background:#f2a6c9;box-shadow:0 0 8px 3px rgba(242,166,201,.55);animation-delay:3.9s;"></div>
+
+    <div class="butterfly-wrap fly-right" style="top:16%;animation-duration:22s;animation-delay:0s;">
+      <svg class="butterfly-svg" viewBox="0 0 40 30" width="30" xmlns="http://www.w3.org/2000/svg">
+        <line x1="20" y1="9" x2="20" y2="21" stroke="#3a2145" stroke-width="1.4"/>
+        <path class="wing wing-l" d="M18 15 C 4 -4, -8 6, 6 16 C -6 24, 4 32, 18 18 Z" fill="#f2a6c9"/>
+        <path class="wing wing-r" d="M22 15 C 36 -4, 48 6, 34 16 C 46 24, 36 32, 22 18 Z" fill="#f2a6c9"/>
+      </svg>
+    </div>
+    <div class="butterfly-wrap fly-left" style="top:58%;animation-duration:26s;animation-delay:4s;">
+      <svg class="butterfly-svg" viewBox="0 0 40 30" width="24" xmlns="http://www.w3.org/2000/svg">
+        <line x1="20" y1="9" x2="20" y2="21" stroke="#3a2145" stroke-width="1.4"/>
+        <path class="wing wing-l" d="M18 15 C 4 -4, -8 6, 6 16 C -6 24, 4 32, 18 18 Z" fill="#e8cd8a"/>
+        <path class="wing wing-r" d="M22 15 C 36 -4, 48 6, 34 16 C 46 24, 36 32, 22 18 Z" fill="#e8cd8a"/>
+      </svg>
+    </div>
+    <div class="butterfly-wrap fly-right" style="top:76%;animation-duration:19s;animation-delay:9s;">
+      <svg class="butterfly-svg" viewBox="0 0 40 30" width="20" xmlns="http://www.w3.org/2000/svg">
+        <line x1="20" y1="9" x2="20" y2="21" stroke="#3a2145" stroke-width="1.4"/>
+        <path class="wing wing-l" d="M18 15 C 4 -4, -8 6, 6 16 C -6 24, 4 32, 18 18 Z" fill="#8fd9c4"/>
+        <path class="wing wing-r" d="M22 15 C 36 -4, 48 6, 34 16 C 46 24, 36 32, 22 18 Z" fill="#8fd9c4"/>
+      </svg>
+    </div>
+    <div class="butterfly-wrap fly-left" style="top:34%;animation-duration:24s;animation-delay:13s;">
+      <svg class="butterfly-svg" viewBox="0 0 40 30" width="26" xmlns="http://www.w3.org/2000/svg">
+        <line x1="20" y1="9" x2="20" y2="21" stroke="#3a2145" stroke-width="1.4"/>
+        <path class="wing wing-l" d="M18 15 C 4 -4, -8 6, 6 16 C -6 24, 4 32, 18 18 Z" fill="#b79ce0"/>
+        <path class="wing wing-r" d="M22 15 C 36 -4, 48 6, 34 16 C 46 24, 36 32, 22 18 Z" fill="#b79ce0"/>
+      </svg>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow gold">Gallery · Adult Designs</span>
+      <h2 class="hn-font" style="font-size:clamp(2rem,4vw,3rem);">Adult Face Painting</h2>
+      <p style="color:rgba(244,234,215,.82);max-width:56ch;margin:0 auto;">Elegant, sophisticated face art for adults, set in a magical garden of glitter and butterflies — from festivals to glam nights out. Photos are added regularly — check back soon.</p>
+    </div>
+    <div class="theme-section">
+      <div class="theme-section-head"><h3>✨ Adult Designs</h3></div>
+      <div class="ph-grid" data-gallery="adult"></div>
     </div>
   </div>
 </section>
