@@ -131,6 +131,14 @@ window.GALLERY_DATA = {
       { src: "images/festive-4.jpg", alt: "Glittery candy cane and peppermint face paint on temple with stars" }
     ],
 
+    /* ---- Adult Designs ---- */
+    adult: [
+      { src: "images/adult-designs-1.jpeg", alt: "Collage of adult arm and neck face painting designs including floral vine, butterfly garden and mermaid-inspired art" },
+      { src: "images/adult-designs-2.jpeg", alt: "Collage of elegant gold and floral chest face painting designs for adults" },
+      { src: "images/adult-designs-3.jpeg", alt: "Collage of popular adult face painting designs for arm and neck including mermaid, butterfly and glitter rose art" },
+      { src: "images/adult-designs-4.jpeg", alt: "Collage of elegant and bright adult arm face painting designs including butterfly and floral art" }
+    ],
+
     /* ---- Henna Designs ---- */
     bridal: [
       { src: "images/bridal-1.jpg", alt: "Intricate bridal henna covering hands, arms and feet with mandala centrepieces" },
