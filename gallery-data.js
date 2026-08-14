@@ -132,11 +132,23 @@ window.GALLERY_DATA = {
     ],
 
     /* ---- Adult Designs ---- */
-    adult: [
-      { src: "images/adult-designs-1.jpeg", alt: "Collage of adult arm and neck face painting designs including floral vine, butterfly garden and mermaid-inspired art" },
-      { src: "images/adult-designs-2.jpeg", alt: "Collage of elegant gold and floral chest face painting designs for adults" },
-      { src: "images/adult-designs-3.jpeg", alt: "Collage of popular adult face painting designs for arm and neck including mermaid, butterfly and glitter rose art" },
-      { src: "images/adult-designs-4.jpeg", alt: "Collage of elegant and bright adult arm face painting designs including butterfly and floral art" }
+    neckArt: [
+      { src: "images/neck-1.jpg", alt: "White and blue floral neck and collarbone face art design" },
+      { src: "images/neck-2.jpg", alt: "Bronze and gold flower neck art with sparkle detail" },
+      { src: "images/neck-3.jpg", alt: "Green botanical vine neck art design flowing over collarbone" },
+      { src: "images/neck-4.jpg", alt: "Pink and purple swirl feather neck art design over collarbone" }
+    ],
+    sideFaceArt: [
+      { src: "images/sideface-1.jpg", alt: "Blue floral side face art along temple and cheek" },
+      { src: "images/sideface-2.jpg", alt: "Purple floral vine side face art along brow and temple" },
+      { src: "images/sideface-3.jpg", alt: "Green butterfly and floral side face art along brow" },
+      { src: "images/sideface-4.jpg", alt: "Red and black butterfly side face art near temple and ear" }
+    ],
+    armDesigns: [
+      { src: "images/arm-1.jpg", alt: "White and blue lace-style floral arm design" },
+      { src: "images/arm-2.jpg", alt: "Purple and gold floral vine arm design with butterfly" },
+      { src: "images/arm-3.jpg", alt: "White daisy flower arm design with green stems" },
+      { src: "images/arm-4.jpg", alt: "Lilac swirl and sparkle arm design" }
     ],
 
     /* ---- Henna Designs ---- */
