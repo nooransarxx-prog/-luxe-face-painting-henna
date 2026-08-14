@@ -311,6 +311,23 @@ section.block.tight{padding:64px 0;}
 .testi-card p.msg{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.18rem;color:#f4ead7;margin-bottom:18px;}
 .testi-name{font-family:'Manrope',sans-serif;font-weight:700;font-size:.85rem;color:var(--hn-gold-2);}
 .testi-role{font-size:.78rem;color:rgba(244,234,215,.55);}
+.testi-stars{color:var(--hn-gold);font-size:.95rem;letter-spacing:2px;margin-bottom:10px;}
+.testi-stars .dim,.testi-stars-playful .dim{opacity:.32;}
+.theme-neutral .testi-card{background:linear-gradient(160deg,var(--hn-brown),var(--hn-brown-2));box-shadow:var(--shadow-soft);}
+
+/* Face painting (playful) review cards */
+.testi-card-playful{
+  background:#fff;border:1px solid rgba(36,24,18,.08);
+  border-radius:var(--radius-md);padding:34px 28px;position:relative;
+  box-shadow:0 10px 28px rgba(36,24,18,.06);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.testi-card-playful:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(36,24,18,.1);}
+.testi-card-playful .q{font-family:'Berkshire Swash',cursive;font-size:2.2rem;color:var(--fp-coral);line-height:.4;display:block;margin-bottom:18px;}
+.testi-card-playful p.msg{font-family:'Manrope',sans-serif;font-size:1.02rem;color:var(--ink-soft);margin-bottom:18px;}
+.testi-card-playful .testi-name{font-family:'Baloo 2',sans-serif;font-weight:700;font-size:.88rem;color:var(--ink);}
+.testi-card-playful .testi-role{font-size:.78rem;color:rgba(74,58,44,.62);}
+.testi-stars-playful{color:var(--fp-coral);font-size:.95rem;letter-spacing:2px;margin-bottom:10px;display:block;}
 
 /* ========================================================
    INSTAGRAM PREVIEW
@@ -427,6 +444,12 @@ section.block.tight{padding:64px 0;}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .success-box{display:none;margin-top:18px;padding:16px 18px;border-radius:14px;background:rgba(51,182,168,.12);color:#1d7d71;font-weight:700;font-size:.9rem;}
 .success-box.show{display:block;}
+.star-rating{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:4px;}
+.star-rating input{position:absolute;opacity:0;width:0;height:0;}
+.star-rating label{font-size:2.1rem;line-height:1;color:#e4dcd0;cursor:pointer;transition:color .15s ease,transform .15s ease;}
+.star-rating label:hover,.star-rating label:hover ~ label{transform:scale(1.08);}
+.star-rating input:checked ~ label{color:var(--fp-yellow);}
+.star-rating input:focus-visible + label{outline:2px solid var(--fp-coral);outline-offset:2px;border-radius:4px;}
 
 .info-card{background:linear-gradient(160deg,var(--hn-brown),var(--hn-brown-2));color:var(--hn-ivory);border-radius:var(--radius-lg);padding:38px 32px;}
 .info-card h3{font-family:'Marcellus',serif;font-weight:400;font-size:1.5rem;}
@@ -956,6 +979,7 @@ footer ul li a:hover{color:var(--fp-yellow);}
       <a class="navlink" href="#henna-designs">Henna Designs</a>
       <a class="navlink" href="#about">About</a>
       <a class="navlink" href="#services">Services</a>
+      <a class="navlink" href="#reviews">Reviews</a>
       <a class="navlink" href="#contact">Contact</a>
     </nav>
   </div>
@@ -1356,22 +1380,6 @@ footer ul li a:hover{color:var(--fp-yellow);}
   </div>
 </section>
 
-<!-- ============ TESTIMONIALS ============ -->
-<section class="block theme-henna" id="testimonials">
-  <svg class="orn tl" width="200" height="200" viewBox="0 0 200 200"><circle cx="0" cy="0" r="80" fill="none" stroke="#e8cd8a" stroke-width="1"/></svg>
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow gold">Client Words</span>
-      <h2 style="font-size:clamp(1.6rem,3vw,2.3rem);">Loved across London's events</h2>
-    </div>
-    <div class="testi-track">
-      <div class="testi-card reveal"><span class="q">“</span><p class="msg">Our daughter's party was transformed — the queue never stopped and every design was flawless.</p><div class="testi-name">Amelia R.</div><div class="testi-role">Birthday party, Wimbledon</div></div>
-      <div class="testi-card reveal"><span class="q">“</span><p class="msg">My bridal henna was the most beautiful part of getting ready. Truly artistry, not just decoration.</p><div class="testi-name">Sara K.</div><div class="testi-role">Bridal henna, wedding week</div></div>
-      <div class="testi-card reveal"><span class="q">“</span><p class="msg">Booked Luxe for our summer festival stall two years running — professional, fast and stunning work.</p><div class="testi-name">Marcus T.</div><div class="testi-role">Festival organiser</div></div>
-    </div>
-  </div>
-</section>
-
 <div class="seam-divider h-to-n">
   <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><path class="seam-line seam-thread" d="M0 30 C 200 54, 300 6, 500 32 S 800 56, 1000 28 S 1150 40 1200 30"/></svg>
 </div>
@@ -1565,6 +1573,76 @@ footer ul li a:hover{color:var(--fp-yellow);}
   </div>
 </section>
 
+<!-- ============ CLIENT REVIEWS ============ -->
+<section class="block theme-neutral" id="reviews">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Client Words</span>
+      <h2 class="fp-font magic-font" style="font-size:clamp(2rem,4vw,3rem);">What Clients Say</h2>
+      <p style="max-width:56ch;margin:0 auto;color:var(--ink-soft);">Real reviews from parents, brides and event organisers across London.</p>
+    </div>
+
+    <h3 class="fp-font" style="font-size:1.3rem;margin:0 0 18px;color:var(--fp-coral);">Face Painting Reviews</h3>
+    <div class="testi-track" style="margin-bottom:56px;">
+      <div class="testi-card-playful reveal"><span class="testi-stars-playful">★★★★★</span><span class="q">“</span><p class="msg">Our daughter's party was transformed — the queue never stopped and every design was flawless.</p><div class="testi-name">Amelia R.</div><div class="testi-role">Face painting, birthday party, Wimbledon</div></div>
+      <div class="testi-card-playful reveal"><span class="testi-stars-playful">★★★★★</span><span class="q">“</span><p class="msg">Booked Luxe for our summer festival stall two years running — professional, fast and stunning face art work.</p><div class="testi-name">Marcus T.</div><div class="testi-role">Face painting, festival organiser</div></div>
+      <div class="testi-card-playful reveal"><span class="testi-stars-playful">★★★★★</span><span class="q">“</span><p class="msg">The butterfly design on my daughter's cheek was so detailed, other parents kept asking who did it. Booking again for sure.</p><div class="testi-name">Priya S.</div><div class="testi-role">Face painting, birthday party, Richmond</div></div>
+      <div class="testi-card-playful reveal"><span class="testi-stars-playful">★★★★<span class="dim">★</span></span><span class="q">“</span><p class="msg">Got the neck and collarbone floral art done at a festival stall — really elegant, though the queue was so long by the end it felt a bit rushed for the last few of us.</p><div class="testi-name">Chloe B.</div><div class="testi-role">Adult face art, summer festival</div></div>
+      <div class="testi-card-playful reveal"><span class="testi-stars-playful">★★★★★</span><span class="q">“</span><p class="msg">Hired for our school fete and the artist handled a huge queue of kids without ever rushing the designs. Every child left thrilled.</p><div class="testi-name">Daniel F.</div><div class="testi-role">Face painting, school fete</div></div>
+      <div class="testi-card-playful reveal"><span class="testi-stars-playful">★★★★★</span><span class="q">“</span><p class="msg">Superhero designs for my son's birthday were a huge hit — the Spiderman mask was practically a work of art.</p><div class="testi-name">Ryan O.</div><div class="testi-role">Face painting, birthday party, Twickenham</div></div>
+    </div>
+
+    <h3 class="hn-font" style="font-size:1.3rem;margin:0 0 18px;color:var(--hn-gold);">Henna Reviews</h3>
+    <div class="testi-track" style="--henna-card-bg:1;">
+      <div class="testi-card reveal"><span class="testi-stars">★★★★★</span><span class="q">“</span><p class="msg">Our bridal henna artist was incredible — the design covered both hands beautifully and was still dark and rich two weeks after the wedding.</p><div class="testi-name">Fatima K.</div><div class="testi-role">Bridal henna, wedding, Wembley</div></div>
+      <div class="testi-card reveal"><span class="testi-stars">★★★★★</span><span class="q">“</span><p class="msg">Booked for an Eid mehndi party and every single guest, from my niece to my grandmother, left with a design they loved.</p><div class="testi-name">Zara N.</div><div class="testi-role">Henna, Eid family party</div></div>
+      <div class="testi-card reveal"><span class="testi-stars">★★★★<span class="dim">★</span></span><span class="q">“</span><p class="msg">The bridal mehndi itself was gorgeous and so intricate, but we ran a little behind schedule so the last couple of guests had their designs done more quickly than planned.</p><div class="testi-name">Aisha M.</div><div class="testi-role">Bridal henna, wedding, Southall</div></div>
+      <div class="testi-card reveal"><span class="testi-stars">★★★★★</span><span class="q">“</span><p class="msg">Ran the henna stall at our Diwali event — quick, simple designs that still looked stunning, and the queue kept moving all evening.</p><div class="testi-name">Meera P.</div><div class="testi-role">Henna, Diwali celebration</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WRITE A REVIEW ============ -->
+<section class="block theme-neutral" id="write-review">
+  <div class="wrap" style="max-width:640px;">
+    <div class="section-head center">
+      <span class="eyebrow">Share Your Experience</span>
+      <h2 class="fp-font" style="font-size:clamp(1.8rem,3.6vw,2.6rem);">Write a Review</h2>
+      <p style="color:var(--ink-soft);">Loved your face painting or henna experience? Leave a review below — it's sent straight to us on WhatsApp, ready to go with one tap.</p>
+    </div>
+    <div class="form-card">
+      <form id="review-form" onsubmit="submitReview(event)">
+        <div class="field">
+          <label>Your Rating</label>
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5" required><label for="star5" aria-label="5 stars">★</label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4" aria-label="4 stars">★</label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3" aria-label="3 stars">★</label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2" aria-label="2 stars">★</label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1" aria-label="1 star">★</label>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="r-name">Name</label><input id="r-name" type="text" required placeholder="Your name"></div>
+          <div class="field">
+            <label for="r-type">Service</label>
+            <select id="r-type" required>
+              <option value="">Select service</option>
+              <option>Face Painting</option>
+              <option>Bridal Henna</option>
+              <option>Henna (Event/Party)</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="r-msg">Your Review</label><textarea id="r-msg" rows="4" required placeholder="Tell us what you loved about your experience..."></textarea></div>
+        <button type="submit" class="btn btn-playful btn-block">Send Review via WhatsApp</button>
+        <div class="success-box" id="review-success-box">✓ Thanks! Your review is ready in WhatsApp — just hit send to reach us on 07498 415011.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CONTACT ============ -->
 <section class="block theme-neutral" id="contact">
   <div class="wrap">
@@ -1625,6 +1703,7 @@ footer ul li a:hover{color:var(--fp-yellow);}
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#gallery">Kids Themes</a></li>
+        <li><a href="#write-review">Write a Review</a></li>
       </ul></div>
       <div><h5>Galleries</h5><ul>
         <li><a href="#superheroes">Superheroes</a></li>
@@ -1745,6 +1824,28 @@ var IMAGES={};
     var box=document.getElementById('success-box');
     box.classList.add('show');
     document.getElementById('booking-form').reset();
+    box.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* Review form — sends review to WhatsApp */
+  function submitReview(e){
+    e.preventDefault();
+    var ratingEl=document.querySelector('input[name="rating"]:checked');
+    var rating=ratingEl ? ratingEl.value : '';
+    var stars=rating ? '★'.repeat(rating) + '☆'.repeat(5-rating) + ' (' + rating + '/5)' : 'Not given';
+    var name=document.getElementById('r-name').value;
+    var type=document.getElementById('r-type').value;
+    var msg=document.getElementById('r-msg').value;
+    var text = "Hi Luxe, I'd like to leave a review!\n"
+      + "Name: " + name + "\n"
+      + "Service: " + type + "\n"
+      + "Rating: " + stars + "\n"
+      + "Review: " + msg;
+    var url = "https://wa.me/447498415011?text=" + encodeURIComponent(text);
+    window.open(url, "_blank");
+    var box=document.getElementById('review-success-box');
+    box.classList.add('show');
+    document.getElementById('review-form').reset();
     box.scrollIntoView({behavior:'smooth',block:'center'});
   }
 </script>
